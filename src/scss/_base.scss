@@ -6,6 +6,14 @@ Tablet: 1378x800
 Mobile: 654x800
 */
 
+// Typography
+
+// Titles
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+// Main Text
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&display=swap');
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -16,6 +24,7 @@ Mobile: 654x800
   box-sizing: border-box;
 }
 * {
+  font-size: 15px;
   margin: 0;
 }
 html,
@@ -49,17 +58,15 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-  line-height: 1.5;
 }
 
 p {
   overflow-wrap: break-word;
-  line-height: 1.5;
 }
+
 ul,
 li,
 a {
-  font-weight: 700;
   list-style: none;
   text-decoration: none;
   padding: 0;
