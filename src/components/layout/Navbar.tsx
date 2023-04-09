@@ -13,8 +13,8 @@ export default function NavBar() {
   return (
     <header>
       <div className="nav-container">
-        <Link onClick={() => setToggle(false)} to="/">
-          <Image className="logo" src={payAPILogo} alt="pay API logo" />
+        <Link onClick={() => setToggle(false)} href="/">
+          <Image src={payAPILogo} alt="pay API logo" />
         </Link>
 
         <nav className="main-nav">
@@ -22,7 +22,7 @@ export default function NavBar() {
             <li>
               <Link
                 onClick={() => setToggle(false)}
-                to="/"
+                href="/"
                 className="nav-link"
               >
                 Home
@@ -31,7 +31,7 @@ export default function NavBar() {
             <li>
               <Link
                 onClick={() => setToggle(false)}
-                to="/aboutus"
+                href="/aboutus"
                 className="nav-link"
               >
                 About Us
@@ -40,7 +40,7 @@ export default function NavBar() {
             <li>
               <Link
                 onClick={() => setToggle(false)}
-                to="/subscribe"
+                href="/subscribe"
                 className="nav-link"
               >
                 Create Your Plan
@@ -49,7 +49,7 @@ export default function NavBar() {
             <li>
               <Link
                 onClick={() => setToggle(false)}
-                to="/coffee"
+                href="/coffee"
                 className="nav-link"
               >
                 Coffee
@@ -58,7 +58,7 @@ export default function NavBar() {
             <li>
               <Link
                 onClick={() => setToggle(false)}
-                to="/registration"
+                href="/registration"
                 className="nav-link"
               >
                 Register
@@ -80,7 +80,7 @@ export default function NavBar() {
           <li>
             <Link
               onClick={() => setToggle(false)}
-              to="/"
+              href="/"
               className={styles.menuLink}
             >
               Home
@@ -89,7 +89,7 @@ export default function NavBar() {
           <li>
             <Link
               onClick={() => setToggle(false)}
-              to="/aboutus"
+              href="/aboutus"
               className={styles.menuLink}
             >
               About Us
@@ -98,7 +98,7 @@ export default function NavBar() {
           <li>
             <Link
               onClick={() => setToggle(false)}
-              to="/subscribe"
+              href="/subscribe"
               className={styles.menuLink}
             >
               Create Your Plan
@@ -107,7 +107,7 @@ export default function NavBar() {
           <li>
             <Link
               onClick={() => setToggle(false)}
-              to="/coffee"
+              href="/coffee"
               className={styles.menuLink}
             >
               Coffee
