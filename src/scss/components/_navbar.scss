@@ -1,0 +1,159 @@
+.navbar {
+    z-index: 10;
+    width: 100%;
+    background: transparent;
+    padding: 2em;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    max-width: 69%;
+  }
+  
+  .mobileMenuItems {
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(
+      180deg,
+      rgba(254, 252, 247, 0.504981) 0%,
+      #fefcf7 55.94%
+    );
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    gap: 1em;
+    align-items: center;
+    position: absolute;
+    top: 2.9em;
+    left: 0;
+    right: 0;
+    bottom: 0em;
+    padding: 1.25em 1.5em;
+    font-family: var(--title-font);
+    font-weight: 900;
+    font-size: 1.5rem;
+    z-index: 1;
+  }
+  
+  .mobileMenuItems > li {
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+  
+  .mobileLink {
+    font-weight: 900;
+    color: var(--darkGreyBlue);
+  }
+  
+  .menuItems {
+    display: none;
+  }
+  
+  .menuLink {
+    color: var(--darkBlue);
+  }
+  
+  .hamburgerMenu {
+    display: block;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .hamburgerMenu:focus {
+    outline: none;
+  }
+  
+  .hamburgerTop,
+  .hamburgerMiddle,
+  .hamburgerBottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 3px;
+    border-radius: 1.5px;
+    background: var(--darkGreyBlue);
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburgerMiddle {
+    transform: translateY(7px);
+  }
+  
+  .hamburgerBottom {
+    transform: translateY(14px);
+  }
+  
+  .open {
+    transform: rotate(90deg) translateY(0px);
+  }
+  
+  .openHamburgerTop {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+  }
+  
+  .openHamburgerMiddle {
+    display: none;
+  }
+  
+  .openHamburgerBottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+  }
+  
+  /* Tablet portrait and larger */
+  @media only screen and (min-width: 600px) {
+    .navBar {
+      padding: 2em;
+    }
+  
+    .mobileLogo {
+      max-width: 100%;
+    }
+  
+    .mobileMenuItems {
+      display: none;
+    }
+  
+    .menuItems {
+      display: flex;
+      align-items: center;
+      margin-left: 0.5em;
+      font-size: var(--xs-font-size);
+    }
+  
+    .menuLink {
+      margin-left: 1.5em;
+      text-transform: uppercase;
+      color: var(--Grey);
+    }
+  
+    .menuLink:hover {
+      color: var(--darkGreyBlue);
+    }
+  
+    .hamburgerMenu {
+      display: none;
+    }
+  }
+  /* Tablet landscape and larger */
+  @media only screen and (min-width: 900px) {
+  }
+  
+  /* Desktop and larger */
+  @media only screen and (min-width: 1200px) {
+    .navBar {
+      padding: 2.7em 5em;
+    }
+  }
+  /* Big desktop (4k) */
+  @media only screen and (min-width: 1800px) {
+  }
+  
