@@ -11,9 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <main>
-        <h1>PayAPI Website</h1>
-      </main>
+      <main></main>
     </>
   );
 }
