@@ -10,7 +10,7 @@ function NavigationItem({
   children: ReactNode;
 }) {
   return (
-    <li>
+    <li className="first:border-t first:pt-8  w-4/5 text-center font-bold">
       <a onClick={onClick} href={href}>
         {children}
       </a>

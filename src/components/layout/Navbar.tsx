@@ -38,7 +38,7 @@ export default function NavBar() {
         </ul>
 
         {toggle && (
-          <ul className="fixed bg-cyan-900 top-0 left-0 bottom-0 w-60 h-screen flex flex-col gap-5 transform translate-x-full opacity-1 transition-transform duration-400">
+          <ul className="fixed bg-cyan-900 top-0 right-0 bottom-0 w-72 h-screen flex flex-col items-center gap-5 transform -translate-x opacity-1 transition-transform duration-40 pt-24">
             {navItems.map((item, index) => (
               <NavigationItem
                 key={index}

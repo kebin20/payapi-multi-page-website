@@ -13,8 +13,8 @@ module.exports = {
         "form-error": "#FF0000",
       },
       fontFamily: {
-        sans: ["Inter", "Arial", "sans-serif"],
-        serif: ["Merriweather", "Georgia", "serif"],
+        sans: ["PT Sans", "sans-serif"],
+        serif: ["DM Serif Display", "serif"],
       },
       fontSize: {
         900: "4.8rem",
