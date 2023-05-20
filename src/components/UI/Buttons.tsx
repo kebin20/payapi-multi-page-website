@@ -1,7 +1,7 @@
 function PrimaryButton(props) {
   return (
     <button
-      className="bg-dark-pink hover:bg-light-pink p-4 rounded-2xl"
+      className=" font-bold bg-dark-pink hover:bg-light-pink px-14 py-3.5 rounded-3xl"
       onClick={props.onClick}
       type={props.type || "button"}
     >
@@ -13,7 +13,7 @@ function PrimaryButton(props) {
 function SecondaryButton(props) {
   return (
     <button
-      className="p-4 rounded-2xl"
+      className="  font-bold px-14 py-3.5 rounded-3xl"
       onClick={props.onClick}
       type={props.type || "button"}
     >
@@ -21,3 +21,5 @@ function SecondaryButton(props) {
     </button>
   );
 }
+
+export { PrimaryButton, SecondaryButton };

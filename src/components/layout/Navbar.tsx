@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import NavigationItem from "./NavigationItem";
 import Hamburger from "./Hamburger";
+import { PrimaryButton } from "../UI/Buttons";
 
 export default function NavBar() {
   const [toggle, setToggle] = useState(false);
@@ -38,17 +39,20 @@ export default function NavBar() {
         </ul>
 
         {toggle && (
-          <ul className="fixed bg-cyan-900 top-0 right-0 bottom-0 w-72 h-screen flex flex-col items-center gap-5 transform -translate-x opacity-1 transition-transform duration-40 pt-24">
-            {navItems.map((item, index) => (
-              <NavigationItem
-                key={index}
-                onClick={toggleHamburgerMenu}
-                href="#"
-              >
-                {item}
-              </NavigationItem>
-            ))}
-          </ul>
+          <>
+            <ul className="bg-dark-blue fixed top-0 right-0 bottom-0 w-72 h-screen flex flex-col items-center gap-5 transform -translate-x opacity-1 transition-transform duration-40 pt-24 bg-pattern-circle">
+              {navItems.map((item, index) => (
+                <NavigationItem
+                  key={index}
+                  onClick={toggleHamburgerMenu}
+                  href="#"
+                >
+                  {item}
+                </NavigationItem>
+              ))}
+              <PrimaryButton>Schedule a Demo</PrimaryButton>
+            </ul>
+          </>
         )}
         <Hamburger
           onToggleHamburgerMenu={toggleHamburgerMenu}
