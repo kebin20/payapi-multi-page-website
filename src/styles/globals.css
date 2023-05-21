@@ -23,3 +23,11 @@ body {
   background-size: 50rem;
   background-position: right 41% top -37rem;
 }
+
+.phone-mockup {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  width: 55%;
+
+}
