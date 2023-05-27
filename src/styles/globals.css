@@ -11,18 +11,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&display=swap");
 
 body {
+  background-color: #edf3f8;
   font-family: "PT Sans", sans-serif;
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: right 50% bottom 15.7%;
+  background-position: right 50% top -65%;
 }
 
-.bg-pattern-circle {
+.bg-pattern-circle-hero {
   background-image: url(../assets/shared/desktop/bg-pattern-circle-dark.svg);
   background-repeat: no-repeat;
   background-size: 50rem;
-  background-position: right 41% top -37rem;
+  background-position: right 41% top -36rem;
+}
+
+.bg-pattern-circle-company {
+  background-image: url(../assets/shared/desktop/bg-pattern-circle-dark.svg);
+  background-repeat: no-repeat;
+  background-size: 50rem;
+  background-position: right 50% top -35.5rem;
 }
 
 h1,
