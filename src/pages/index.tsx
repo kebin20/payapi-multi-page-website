@@ -16,11 +16,11 @@ export default function Home() {
       <NavBar />
       <main>
         <div className="relative">
-          <Image
+          {/* <Image
             alt="build your apis for free"
             src={PhoneMockup}
             className="left-1/2 -translate-x-1/2 -translate-y-[5%] w-1/2"
-          />
+          /> */}
 
           <h1>Start building with our APIs for absolutely free.</h1>
 

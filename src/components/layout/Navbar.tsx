@@ -40,7 +40,7 @@ export default function NavBar() {
 
         {toggle && (
           <>
-            <ul className="bg-dark-blue fixed top-0 right-0 bottom-0 w-72 h-screen flex flex-col items-center gap-5 transform -translate-x opacity-1 transition-transform duration-40 pt-24 bg-pattern-circle">
+            <ul className="bg-dark-blue fixed top-0 right-0 bottom-0 w-72 h-screen flex flex-col items-center gap-5 transform -translate-x opacity-1 z-10 transition-transform duration-40 pt-24 bg-pattern-circle">
               {navItems.map((item, index) => (
                 <NavigationItem
                   key={index}

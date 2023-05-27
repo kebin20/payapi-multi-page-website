@@ -19,6 +19,7 @@ function Hamburger({
     transition-all duration-250
     relative
     border-0
+    z-10
     "
     >
       <span
