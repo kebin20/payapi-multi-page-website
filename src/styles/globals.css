@@ -11,6 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&display=swap");
 
 body {
+  font-family: "PT Sans", sans-serif;
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: auto;
@@ -24,10 +25,10 @@ body {
   background-position: right 41% top -37rem;
 }
 
-.phone-mockup {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -5%);
-  width: 55%;
-
+h1,
+h2,
+h3,
+h4 {
+  font-family: "DM Serif Display", serif;
 }
+
