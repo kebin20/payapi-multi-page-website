@@ -45,7 +45,7 @@ module.exports = {
         base: "1px",
       },
       borderRadius: {
-        base: "20px",
+        base: "24px",
       },
       boxShadow: {
         base: "1px 3px 5px rgba(0,0,0,0.1)",
