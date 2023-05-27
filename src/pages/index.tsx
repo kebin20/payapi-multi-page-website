@@ -46,15 +46,15 @@ export default function Home() {
             placeholder="Enter email adddress"
             className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg"
           />
-          <PrimaryButton>Schedule a demo</PrimaryButton>
+          <PrimaryButton>Schedule a Demo</PrimaryButton>
           <p>
             Have any questions?{" "}
             <a className="font-bold" href="#">
-              Contact us
+              Contact Us
             </a>
           </p>
         </section>
-        <section className="bg-dark-blue grid justify-items-center gap-8 text-center text-white px-10 py-28 ">
+        <section className="bg-dark-blue grid justify-items-center gap-8 text-center text-white px-10 py-28 bg-pattern-circle-company ">
           <div className="grid grid-cols-2 gap-14">
             {companyLogos.map((logo: any, index: number) => {
               return <Image key={index} src={logo.src} alt={logo.alt} />;
