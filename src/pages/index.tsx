@@ -3,7 +3,8 @@ import NavBar from "@/components/layout/Navbar";
 import Image from "next/image";
 
 import PhoneMockup from "../assets/home/desktop/illustration-phone-mockup.svg";
-import UIMockup from "../assets/home/desktop/illustration-easy-to-implement.svg";
+import easyMockup from "../assets/home/desktop/illustration-easy-to-implement.svg";
+import SimpleUIMockup from "../assets/home/desktop/illustration-simple-ui.svg";
 
 import TeslaImage from "../assets/shared/desktop/tesla.svg";
 import HPImage from "../assets/shared/desktop/hewlett-packard.svg";
@@ -34,7 +35,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <main className="container mx-auto">
-        <section className="mx-6 mb-20 grid gap-8 text-center">
+        <section className="mx-6 grid gap-8 text-center">
           <Image
             alt="build your apis for free"
             src={PhoneMockup}
@@ -56,15 +57,13 @@ export default function Home() {
             </a>
           </p>
         </section>
-        <section className="bg-dark-blue grid justify-items-center gap-8 text-center text-white px-10 py-28 bg-pattern-circle-company ">
+        <section className="bg-dark-blue my-20 grid justify-items-center gap-8 text-center text-white px-10 py-28 bg-pattern-circle-company ">
           <div className="grid grid-cols-2 gap-14">
             {companyLogos.map((logo: any, index: number) => {
               return <Image key={index} src={logo.src} alt={logo.alt} />;
             })}
           </div>
-          <h2 className="mt-10 text-blue text-4xl font-bold">
-            Who we work with
-          </h2>
+          <h2 className="mt-10 text-4xl font-bold">Who we work with</h2>
           <p className="leading-7">
             Today, millions of people around the world have successfully
             connected their accounts to apps they love using our API. We provide
@@ -73,13 +72,21 @@ export default function Home() {
           </p>
           <SecondaryButton>about us</SecondaryButton>
         </section>
-        <section className="mx-6 grid gap-4 justify-items-center text-center">
-          <Image src={UIMockup} alt="easy to implement UI" />
+        <section className="my-20 grid gap-4 justify-items-center text-center">
+          <Image src={easyMockup} alt="easy to implement UI" />
           <h2 className="text-blue text-4xl font-bold">Easy to implement</h2>
-          <p>
+          <p className="mx-6">
             Our API comes with just a few lines of code. You’ll be up and
             running in no time. We built our documentation page to integrate
             payments functionality with ease.
+          </p>
+        </section>
+        <section className="my-20 grid gap-4 justify-items-center text-center">
+          <Image src={SimpleUIMockup} alt="easy to implement UI" />
+          <h2 className="text-blue text-4xl font-bold">Simple UI & UX</h2>
+          <p className="mx-6">
+            Our pre-built form is easy to integrate in your app or website’s
+            checkout flow and designed to optimize conversion.
           </p>
         </section>
       </main>
