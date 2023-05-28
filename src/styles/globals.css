@@ -39,3 +39,8 @@ h3,
 h4 {
   font-family: "DM Serif Display", serif;
 }
+
+p {
+  color: #6c8294;
+  opacity: 0.7;
+}

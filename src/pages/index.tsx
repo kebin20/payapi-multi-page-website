@@ -3,6 +3,8 @@ import NavBar from "@/components/layout/Navbar";
 import Image from "next/image";
 
 import PhoneMockup from "../assets/home/desktop/illustration-phone-mockup.svg";
+import UIMockup from "../assets/home/desktop/illustration-easy-to-implement.svg";
+
 import TeslaImage from "../assets/shared/desktop/tesla.svg";
 import HPImage from "../assets/shared/desktop/hewlett-packard.svg";
 import GoogleImage from "../assets/shared/desktop/google.svg";
@@ -31,14 +33,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <main className="container mx-auto ">
+      <main className="container mx-auto">
         <section className="mx-6 mb-20 grid gap-8 text-center">
           <Image
             alt="build your apis for free"
             src={PhoneMockup}
             className="w-1/2 m-auto"
           />
-          <h1 className="text-blue text-3xl font-bold leading-9 mx-4">
+          <h1 className="text-3xl font-bold leading-9 mx-4">
             Start building with our APIs for absolutely free.
           </h1>
           <input
@@ -60,14 +62,25 @@ export default function Home() {
               return <Image key={index} src={logo.src} alt={logo.alt} />;
             })}
           </div>
-          <h2 className="mt-10 text-4xl font-bold">Who we work with</h2>
-          <p className="opacity-70 leading-7">
+          <h2 className="mt-10 text-blue text-4xl font-bold">
+            Who we work with
+          </h2>
+          <p className="leading-7">
             Today, millions of people around the world have successfully
             connected their accounts to apps they love using our API. We provide
             developers with the tools they need to create easy and accessible
             experiences for their users.
           </p>
           <SecondaryButton>about us</SecondaryButton>
+        </section>
+        <section className="mx-6 grid gap-4 justify-items-center text-center">
+          <Image src={UIMockup} alt="easy to implement UI" />
+          <h2 className="text-blue text-4xl font-bold">Easy to implement</h2>
+          <p>
+            Our API comes with just a few lines of code. You’ll be up and
+            running in no time. We built our documentation page to integrate
+            payments functionality with ease.
+          </p>
         </section>
       </main>
     </>
