@@ -3,8 +3,12 @@ import NavBar from "@/components/layout/Navbar";
 import Image from "next/image";
 
 import PhoneMockup from "../assets/home/desktop/illustration-phone-mockup.svg";
-import easyMockup from "../assets/home/desktop/illustration-easy-to-implement.svg";
+import EasyMockup from "../assets/home/desktop/illustration-easy-to-implement.svg";
 import SimpleUIMockup from "../assets/home/desktop/illustration-simple-ui.svg";
+
+import PersonalFinances from "../assets/home/desktop/icon-personal-finances.svg";
+import ConsumerPayments from "../assets/home/desktop/icon-consumer-payments.svg";
+import BankingCoverage from "../assets/home/desktop/icon-banking-and-coverage.svg";
 
 import TeslaImage from "../assets/shared/desktop/tesla.svg";
 import HPImage from "../assets/shared/desktop/hewlett-packard.svg";
@@ -72,22 +76,54 @@ export default function Home() {
           </p>
           <SecondaryButton>about us</SecondaryButton>
         </section>
-        <section className="my-20 grid gap-4 justify-items-center text-center">
-          <Image src={easyMockup} alt="easy to implement UI" />
+        <section className="my-20 mx-6 grid gap-4 justify-items-center text-center">
+          <Image src={EasyMockup} alt="easy to implement UI" />
           <h2 className="text-blue text-4xl font-bold">Easy to implement</h2>
-          <p className="mx-6">
+          <p>
             Our API comes with just a few lines of code. You’ll be up and
             running in no time. We built our documentation page to integrate
             payments functionality with ease.
           </p>
         </section>
-        <section className="my-20 grid gap-4 justify-items-center text-center">
+        <section className="my-20 mx-6 grid gap-4 justify-items-center text-center">
           <Image src={SimpleUIMockup} alt="easy to implement UI" />
           <h2 className="text-blue text-4xl font-bold">Simple UI & UX</h2>
-          <p className="mx-6">
+          <p>
             Our pre-built form is easy to integrate in your app or website’s
             checkout flow and designed to optimize conversion.
           </p>
+        </section>
+        <section className="my-20 mx-8 grid gap-12 justify-items-center text-center">
+          <div className="flex flex-col items-center gap-8">
+            <Image
+              src={PersonalFinances}
+              alt={"sort your personal finances easily"}
+            />
+            <h3 className="text-lg font-bold font-sans">Personal Finances</h3>
+            <p>
+              Consolidate financial data from multiple sources and categorize
+              transactions up to 2 years of history. Analyze reports to
+              reconcile activities in your account.
+            </p>
+          </div>
+          <div className="flex flex-col items-center gap-8">
+            <Image src={BankingCoverage} alt={"explore our banking services"} />
+            <h3 className="text-lg font-bold font-sans">Banking & Coverage</h3>
+            <p>
+              With our platform, you can speed up account onboarding and support
+              ongoing payments for checking, savings, credit card, and brokerage
+              accounts.
+            </p>
+          </div>
+          <div className="flex flex-col items-center gap-8">
+            <Image src={ConsumerPayments} alt={"set up secure payments"} />
+            <h3 className="text-lg font-bold font-sans">Consumer Payments</h3>
+            <p>
+              It’s easier to set up secure bank payments with us through a flow
+              designed with the user experience in mind. Customers could
+              instantly authenticate their account.
+            </p>
+          </div>
         </section>
       </main>
     </>
