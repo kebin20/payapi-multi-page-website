@@ -45,7 +45,7 @@ export default function Home() {
             src={PhoneMockup}
             className="w-1/2 m-auto"
           />
-          <h1 className="text-3xl font-bold leading-9 mx-4">
+          <h1 className="text-3xl text-blue font-bold leading-9 mx-4">
             Start building with our APIs for absolutely free.
           </h1>
           <input
@@ -124,6 +124,17 @@ export default function Home() {
               instantly authenticate their account.
             </p>
           </div>
+        </section>
+        <section className="mx-6 grid gap-8 text-center">
+          <h2 className="text-3xl  text-blue font-bold leading-9 mx-4">
+            Ready to start?
+          </h2>
+          <input
+            type="text"
+            placeholder="Enter email adddress"
+            className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg"
+          />
+          <PrimaryButton>Schedule a Demo</PrimaryButton>
         </section>
       </main>
     </>
