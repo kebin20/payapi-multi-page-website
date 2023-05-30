@@ -18,6 +18,7 @@ import OracleImage from "../assets/shared/desktop/oracle.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia.svg";
 
 import { PrimaryButton, SecondaryButton } from "@/components/UI/Buttons";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   const companyLogos: any = [
@@ -137,6 +138,7 @@ export default function Home() {
           <PrimaryButton>Schedule a Demo</PrimaryButton>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
