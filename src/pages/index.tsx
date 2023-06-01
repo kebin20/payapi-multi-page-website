@@ -126,7 +126,7 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section className="mx-6 grid gap-8 text-center">
+        <section className="mx-6 mb-20 grid gap-8 text-center">
           <h2 className="text-3xl  text-blue font-bold leading-9 mx-4">
             Ready to start?
           </h2>
