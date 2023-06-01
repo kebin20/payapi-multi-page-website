@@ -16,7 +16,7 @@ body {
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: right 50% top -29.3%;
+  background-position: right 50% top -15%;
 }
 
 .bg-pattern-circle-hero {
@@ -31,6 +31,13 @@ body {
   background-repeat: no-repeat;
   background-size: 50rem;
   background-position: right 50% top -35.5rem;
+}
+
+.bg-pattern-circle-footer {
+  background-image: url(../assets/shared/desktop/bg-pattern-circle-dark.svg);
+  background-repeat: no-repeat;
+  background-size: 50rem;
+  background-position: right 50% top 13.5rem;
 }
 
 h1,
