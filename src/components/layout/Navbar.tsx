@@ -45,7 +45,7 @@ export default function NavBar() {
                 <NavigationItem
                   key={index}
                   onClick={toggleHamburgerMenu}
-                  href="#"
+                  href={`#${item}`}
                 >
                   {item}
                 </NavigationItem>
