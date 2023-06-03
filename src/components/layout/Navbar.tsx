@@ -32,7 +32,10 @@ export default function NavBar() {
 
         <ul className="hidden">
           {navItems.map((item, index) => (
-            <NavigationItem key={index} onClick={toggleHamburgerMenu} href="#">
+            <NavigationItem
+              key={index}
+              href={`/${item}`}
+            >
               {item}
             </NavigationItem>
           ))}
@@ -45,7 +48,7 @@ export default function NavBar() {
                 <NavigationItem
                   key={index}
                   onClick={toggleHamburgerMenu}
-                  href={`#${item}`}
+                  href={`/${item}`}
                 >
                   {item}
                 </NavigationItem>

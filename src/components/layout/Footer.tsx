@@ -4,6 +4,7 @@ import whitePayAPILogo from "../../assets/shared/desktop/logo-white.svg";
 import faceBookLogo from "../../assets/shared/desktop/facebook.svg";
 import TwitterLogo from "../../assets/shared/desktop/twitter.svg";
 import LinkedInLogo from "../../assets/shared/desktop/linkedin.svg";
+import NavigationItem from "./NavigationItem";
 
 function Footer() {
   const navItems = ["Pricing", "About", "Contact"];
@@ -16,7 +17,9 @@ function Footer() {
 
       <ul className="flex flex-col items-center gap-8 text-white font-bold">
         {navItems.map((item, index) => (
-          <li key={index}>{item}</li>
+          <NavigationItem key={index} href={`/${item}`}>
+            {item}
+          </NavigationItem>
         ))}
       </ul>
       <div className="flex gap-8 p-10">
