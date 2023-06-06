@@ -8,9 +8,9 @@ function Pricing() {
     <>
       <NavBar />
       <main>
-        <h1>Pricing</h1>
-        <div>
-          <h2>Free Plan</h2>
+        <h1 className="text-3xl">Pricing</h1>
+        <div className="flex flex-col items-center gap-4">
+          <h2 className="text-2xl text-dark-pink">Free Plan</h2>
           <p>$0.00</p>
           <ul>
             <li>Transactions</li>
@@ -23,7 +23,7 @@ function Pricing() {
           </ul>
           <SecondaryButton>Request Access</SecondaryButton>
         </div>
-        <div>
+        <div className="flex flex-col items-center gap-4">
           <h2>Basic Plan</h2>
           <p>$249.00</p>
           <ul>
@@ -37,7 +37,7 @@ function Pricing() {
           </ul>
           <SecondaryButton>Request Access</SecondaryButton>
         </div>
-        <div>
+        <div className="flex flex-col items-center gap-4">
           <h2>Premium Plan</h2>
           <p>$499.00</p>
           <ul>
