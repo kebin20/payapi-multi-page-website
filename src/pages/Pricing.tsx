@@ -8,10 +8,10 @@ function Pricing() {
     <>
       <NavBar />
       <main>
-        <h1 className="text-3xl">Pricing</h1>
+        <h1 className="text-3xl text-center text-blue font-bold ">Pricing</h1>
         <div className="flex flex-col items-center gap-4">
-          <h2 className="text-2xl text-dark-pink">Free Plan</h2>
-          <p>$0.00</p>
+          <h2 className="text-2xl text-dark-pink p-14 font-bold">Free Plan</h2>
+          <h3 className="text-6xl text-blue font-bold">$0.00</h3>
           <ul>
             <li>Transactions</li>
             <li>Auth</li>
@@ -21,11 +21,13 @@ function Pricing() {
             <li>Liabilities</li>
             <li>Income</li>
           </ul>
-          <SecondaryButton>Request Access</SecondaryButton>
+          <SecondaryButton className="border-blue text-blue">
+            Request Access
+          </SecondaryButton>
         </div>
         <div className="flex flex-col items-center gap-4">
-          <h2>Basic Plan</h2>
-          <p>$249.00</p>
+          <h2 className="text-2xl text-dark-pink p-14 font-bold">Basic Plan</h2>
+          <h3 className="text-6xl text-blue font-bold">$249.00</h3>
           <ul>
             <li>Transactions</li>
             <li>Auth</li>
@@ -35,11 +37,15 @@ function Pricing() {
             <li>Liabilities</li>
             <li>Income</li>
           </ul>
-          <SecondaryButton>Request Access</SecondaryButton>
+          <SecondaryButton className="border-blue text-blue">
+            Request Access
+          </SecondaryButton>
         </div>
-        <div className="flex flex-col items-center gap-4">
-          <h2>Premium Plan</h2>
-          <p>$499.00</p>
+        <div className="flex flex-col items-center gap-4 mb-10">
+          <h2 className="text-2xl text-dark-pink p-14 font-bold">
+            Premium Plan
+          </h2>
+          <h3 className="text-6xl text-blue font-bold">$499.00</h3>
           <ul>
             <li>Transactions</li>
             <li>Auth</li>
@@ -49,7 +55,9 @@ function Pricing() {
             <li>Liabilities</li>
             <li>Income</li>
           </ul>
-          <SecondaryButton>Request Access</SecondaryButton>
+          <SecondaryButton className="border-blue text-blue">
+            Request Access
+          </SecondaryButton>
         </div>
         <CallToAction />
       </main>
