@@ -11,7 +11,7 @@ export default function CallToAction() {
         placeholder="Enter email adddress"
         className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg"
       />
-      <PrimaryButton>Schedule a Demo</PrimaryButton>
+      <PrimaryButton className="text-white">Schedule a Demo</PrimaryButton>
     </section>
   );
 }
