@@ -13,7 +13,7 @@ module.exports = {
         "form-error": "#FF0000",
       },
       fontFamily: {
-        sans: ["PT Sans", "sans-serif"],
+        sans: ["Public Sans", "sans-serif"],
         serif: ["DM Serif Display", "serif"],
       },
       fontSize: {
