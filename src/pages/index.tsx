@@ -32,7 +32,7 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <div className="index-main">
       <Head>
         <title>PayAPI</title>
         <meta name="description" content="Setup your Payment system with us!" />
@@ -130,6 +130,6 @@ export default function Home() {
         <CallToAction />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

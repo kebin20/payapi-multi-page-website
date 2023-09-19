@@ -13,10 +13,20 @@
 body {
   background-color: #edf3f8;
   font-family: "PT Sans", sans-serif;
+}
+
+.index-main {
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 50% top -15%;
+}
+
+.secondary-main {
+  background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right 130% top -32%;
 }
 
 .bg-pattern-circle-hero {
