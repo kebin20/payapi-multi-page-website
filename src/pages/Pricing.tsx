@@ -12,7 +12,7 @@ function Pricing() {
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-2xl text-dark-pink p-14 font-bold">Free Plan</h2>
           <h3 className="text-6xl font-bold">$0.00</h3>
-          <ul className="flex flex-col gap-4 border-y-2 border-gray p-6 w-5/6">
+          <ul className="first:border-t border-white/10 first:pt-8 px-32 flex flex-col gap-4 border-y-2 border-gray p-6 ">
             <li>Transactions</li>
             <li>Auth</li>
             <li>Identity</li>
@@ -28,7 +28,7 @@ function Pricing() {
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-2xl text-dark-pink p-14 font-bold">Basic Plan</h2>
           <h3 className="text-6xl font-bold">$249.00</h3>
-          <ul className="flex flex-col gap-4 border-y-2 border-gray p-6 w-5/6">
+          <ul className="flex flex-col gap-4 border-y-2 border-gray p-6 px-32">
             <li>Transactions</li>
             <li>Auth</li>
             <li>Identity</li>
@@ -46,7 +46,7 @@ function Pricing() {
             Premium Plan
           </h2>
           <h3 className="text-6xl text-blue font-bold">$499.00</h3>
-          <ul className="flex flex-col gap-4 border-y-2 border-gray p-6 w-5/6">
+          <ul className="flex flex-col gap-4 border-y-2 border-gray p-6 px-32">
             <li>Transactions</li>
             <li>Auth</li>
             <li>Identity</li>
