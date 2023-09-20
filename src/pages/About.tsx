@@ -34,16 +34,26 @@ function About() {
           <Image alt="team members" src={TeamMembersImage} />
           <ul className="flex flex-col justify-center text-center gap-4 border-y-2 border-gray p-6 my-10 mx-10">
             <li>
-              <h3>Team Members</h3>
-              <p>300+</p>
+              <h3 className="text-blue font-sans opacity-70">Team Members</h3>
+              <p className="text-dark-pink font-serif text-750 font-bold opacity-100">
+                300+
+              </p>
             </li>
             <li>
-              <h3>Offices in the US</h3>
-              <p>3</p>
+              <h3 className="text-blue font-sans opacity-70">
+                Offices in the US
+              </h3>
+              <p className="text-dark-pink font-serif text-750 font-bold opacity-100">
+                3
+              </p>
             </li>
             <li>
-              <h3>Transactions analyzed</h3>
-              <p>10M+</p>
+              <h3 className="text-blue font-sans opacity-70">
+                Transactions analyzed
+              </h3>
+              <p className="text-dark-pink font-serif text-750 font-bold opacity-100">
+                10M+
+              </p>
             </li>
           </ul>
         </section>
