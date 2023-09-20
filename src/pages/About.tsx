@@ -7,7 +7,7 @@ import TeamMembersImage from "@/assets/about/mobile/image-team-members.jpg";
 
 function About() {
   return (
-    <div>
+    <div className="secondary-main">
       <NavBar />
       <main>
         <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6">

@@ -29,6 +29,13 @@ body {
   background-position: right 130% top -32%;
 }
 
+.contact-main {
+  background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right 130% top -122%;
+}
+
 .bg-pattern-circle-hero {
   background-image: url(../assets/shared/desktop/bg-pattern-circle-dark.svg);
   background-repeat: no-repeat;
