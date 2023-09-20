@@ -21,6 +21,7 @@ module.exports = {
         800: "3.73rem",
         700: "3.2rem",
         600: "2.13rem",
+        550: "2em",
         500: "1.6rem",
         400: "1.2rem",
         base: "1rem",
