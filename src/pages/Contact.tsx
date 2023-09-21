@@ -9,6 +9,7 @@ import GoogleImage from "../assets/shared/desktop/google-dark.svg";
 import MicrosoftImage from "../assets/shared/desktop/microsoft-dark.svg";
 import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
+import { PrimaryButton, SecondaryButton } from "@/components/UI/Buttons";
 
 function Contact() {
   const companyLogos: any = [
@@ -27,30 +28,90 @@ function Contact() {
         <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6">
           Submit a help request and we’ll get in touch shortly.
         </h1>
-        <form className="flex flex-col" action="">
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" />
+        <form className="flex flex-col gap-4 text-blue mx-6 my-14" action="">
+          <div className="flex justify-between border-b-2 border-blue border-opacity-30 p-5">
+            {" "}
+            <label htmlFor="name" className="opacity-50">
+              Name
+            </label>
+            <input
+              className="bg-transparent"
+              type="text"
+              id="name"
+              name="name"
+            />
+          </div>
 
-          <label htmlFor="email">Email Address:</label>
-          <input type="text" id="email" name="email" />
+          <div className="flex justify-between  border-b-2 border-blue border-opacity-30 p-5">
+            {" "}
+            <label htmlFor="" className="opacity-50">
+              Email Address
+            </label>
+            <input
+              className="bg-transparent"
+              type="text"
+              id="email address"
+              name="email address"
+            />
+          </div>
 
-          <label htmlFor="company">Company Name:</label>
-          <input type="text" id="company" name="company" />
+          <div className="flex justify-between  border-b-2 border-blue border-opacity-30 p-5">
+            {" "}
+            <label htmlFor="" className="opacity-50">
+              Company Name
+            </label>
+            <input
+              className="bg-transparent w-7/12"
+              type="text"
+              id="company name"
+              name="company name"
+            />
+          </div>
 
-          <label htmlFor="title">Title:</label>
-          <input type="text" id="title" name="title" />
+          <div className="flex justify-between  border-b-2 border-blue border-opacity-30 p-5">
+            {" "}
+            <label htmlFor="" className="opacity-50">
+              Title
+            </label>
+            <input
+              className="bg-transparent"
+              type="text"
+              id="title"
+              name="title"
+            />
+          </div>
 
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message"></textarea>
+          <div className="flex justify-between border-b-2 border-blue border-opacity-30 p-5">
+            {" "}
+            <label htmlFor="" className="opacity-50">
+              Message
+            </label>
+            <textarea
+              className="bg-transparent"
+              type="text"
+              id="message"
+              name="message"
+            />
+          </div>
 
-          <div>
+          <div className="flex gap-6 opacity-100 my-4">
+            <input
+              type="checkbox"
+              id="subscribe"
+              name="subscribe"
+              className="bg-transparent"
+            />
             <label className="flex" htmlFor="subscribe">
               Stay up-to-date with company announcements and updates to our API
             </label>
-            <input type="checkbox" id="subscribe" name="subscribe" />
           </div>
 
-          <button type="submit">Submit</button>
+          <SecondaryButton
+            className="border-blue text-blue opacity-100 self-start"
+            type="submit"
+          >
+            Submit
+          </SecondaryButton>
         </form>
         <section className="grid justify-items-center gap-8 text-center px-10 py-14">
           <h2 className="text-blue text-2xl font-bold">
