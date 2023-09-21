@@ -27,7 +27,31 @@ function Contact() {
         <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6">
           Submit a help request and we’ll get in touch shortly.
         </h1>
-        <form action=""></form>
+        <form className="flex flex-col" action="">
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label htmlFor="email">Email Address:</label>
+          <input type="text" id="email" name="email" />
+
+          <label htmlFor="company">Company Name:</label>
+          <input type="text" id="company" name="company" />
+
+          <label htmlFor="title">Title:</label>
+          <input type="text" id="title" name="title" />
+
+          <label htmlFor="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+
+          <div>
+            <label className="flex" htmlFor="subscribe">
+              Stay up-to-date with company announcements and updates to our API
+            </label>
+            <input type="checkbox" id="subscribe" name="subscribe" />
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
         <section className="grid justify-items-center gap-8 text-center px-10 py-14">
           <h2 className="text-blue text-2xl font-bold">
             Join the thousands of innovators already building with us
