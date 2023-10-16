@@ -30,13 +30,16 @@ export default function NavBar() {
           <Image src={payAPILogo} alt="pay API logo" />
         </Link>
 
-        <ul className="hidden">
+        <ul className="hidden md:flex md:items-center md: gap-16">
           {navItems.map((item, index) => (
             <NavigationItem key={index} href={`/${item}`}>
               {item}
             </NavigationItem>
           ))}
         </ul>
+        <PrimaryButton className="hidden rounded-full md:block md:px-6">
+          Schedule a Demo
+        </PrimaryButton>
 
         {toggle && (
           <>

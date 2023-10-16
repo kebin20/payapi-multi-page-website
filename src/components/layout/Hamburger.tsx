@@ -20,6 +20,7 @@ function Hamburger({
     relative
     border-0
     z-10
+    md:hidden
     "
     >
       <span
