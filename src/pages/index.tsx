@@ -42,19 +42,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <main className="container mx-auto">
+      {/* <main className="container mx-auto"> */}
+      <main>
         <section className="mx-6 grid text-center">
           <Image
             alt="build your apis for free"
             src={PhoneMockup}
-            className="w-1/2 m-auto"
+            className="w-2/5 m-auto"
           />
           <div className="flex flex-col gap-10 md:px-14">
             {" "}
-            <h1 className="text-3xl text-blue font-bold leading-9 mx-4 md:text-5xl">
+            <h1 className="text-3xl text-blue font-bold leading-9 mx-4 md:text-5xl md:mx-10">
               Start building with our APIs for absolutely free.
             </h1>
-            <div className="md:relative">
+            <div className="flex flex-col gap-4 md:relative">
               {" "}
               <input
                 type="text"
@@ -73,14 +74,16 @@ export default function Home() {
             </a>
           </p>
         </section>
-        <section className="bg-dark-blue my-20 grid justify-items-center gap-8 text-center text-white px-10 py-28 bg-pattern-circle-company ">
-          <div className="grid grid-cols-2 gap-14">
+        <section className=" bg-dark-blue my-20 grid justify-items-center gap-8 text-center text-white px-10 py-28 bg-pattern-circle-company ">
+          <div className="grid grid-cols-2 gap-14 md:grid-cols-3">
             {companyLogos.map((logo: any, index: number) => {
               return <Image key={index} src={logo.src} alt={logo.alt} />;
             })}
           </div>
-          <h2 className="mt-10 text-4xl font-bold">Who we work with</h2>
-          <p className="leading-7">
+          <h2 className="mt-10 text-4xl font-bold md:text-5xl ">
+            Who we work with
+          </h2>
+          <p className="leading-7 md:mx-32">
             Today, millions of people around the world have successfully
             connected their accounts to apps they love using our API. We provide
             developers with the tools they need to create easy and accessible
@@ -89,24 +92,32 @@ export default function Home() {
           <SecondaryButton>about us</SecondaryButton>
         </section>
         <section className="my-20 mx-6 grid gap-4 justify-items-center text-center">
-          <Image src={EasyMockup} alt="easy to implement UI" />
+          <Image
+            src={EasyMockup}
+            alt="easy to implement UI"
+            className="md:max-w-md"
+          />
           <h2 className="text-blue text-4xl font-bold">Easy to implement</h2>
-          <p>
+          <p className="md:mx-20">
             Our API comes with just a few lines of code. You’ll be up and
             running in no time. We built our documentation page to integrate
             payments functionality with ease.
           </p>
         </section>
         <section className="my-20 mx-6 grid gap-4 justify-items-center text-center">
-          <Image src={SimpleUIMockup} alt="easy to implement UI" />
+          <Image
+            src={SimpleUIMockup}
+            alt="easy to implement UI"
+            className="md:max-w-md"
+          />
           <h2 className="text-blue text-4xl font-bold">Simple UI & UX</h2>
-          <p>
+          <p className="md:mx-20">
             Our pre-built form is easy to integrate in your app or website’s
             checkout flow and designed to optimize conversion.
           </p>
         </section>
-        <section className="my-20 mx-8 grid gap-12 justify-items-center text-center">
-          <div className="flex flex-col items-center gap-8">
+        <section className="my-20 mx-8 grid gap-12 justify-items-center text-center md:grid-cols-3 md:gap-6">
+          <div className="flex flex-col items-center gap-8 md:gap-6">
             <Image
               src={PersonalFinances}
               alt={"sort your personal finances easily"}
@@ -118,7 +129,7 @@ export default function Home() {
               reconcile activities in your account.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-8 md:gap-6">
             <Image src={BankingCoverage} alt={"explore our banking services"} />
             <h3 className="text-lg font-bold font-sans">Banking & Coverage</h3>
             <p>
@@ -127,7 +138,7 @@ export default function Home() {
               accounts.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-8 md:gap-6">
             <Image src={ConsumerPayments} alt={"set up secure payments"} />
             <h3 className="text-lg font-bold font-sans">Consumer Payments</h3>
             <p>
