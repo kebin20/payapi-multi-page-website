@@ -32,7 +32,11 @@ export default function NavBar() {
 
         <ul className="hidden md:flex md:items-center md: gap-16">
           {navItems.map((item, index) => (
-            <NavigationItem key={index} href={`/${item}`}>
+            <NavigationItem
+              key={index}
+              href={`/${item}`}
+              className="md:text-blue"
+            >
               {item}
             </NavigationItem>
           ))}
@@ -50,6 +54,7 @@ export default function NavBar() {
                   key={index}
                   onClick={toggleHamburgerMenu}
                   href={`/${item}`}
+                  className=""
                 >
                   {item}
                 </NavigationItem>
