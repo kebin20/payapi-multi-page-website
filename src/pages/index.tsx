@@ -43,22 +43,30 @@ export default function Home() {
       </Head>
       <NavBar />
       <main className="container mx-auto">
-        <section className="mx-6 grid gap-8 text-center">
+        <section className="mx-6 grid text-center">
           <Image
             alt="build your apis for free"
             src={PhoneMockup}
             className="w-1/2 m-auto"
           />
-          <h1 className="text-3xl text-blue font-bold leading-9 mx-4">
-            Start building with our APIs for absolutely free.
-          </h1>
-          <input
-            type="text"
-            placeholder="Enter email adddress"
-            className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg"
-          />
-          <PrimaryButton className="text-white">Schedule a Demo</PrimaryButton>
-          <p>
+          <div className="flex flex-col gap-10 md:px-14">
+            {" "}
+            <h1 className="text-3xl text-blue font-bold leading-9 mx-4 md:text-5xl">
+              Start building with our APIs for absolutely free.
+            </h1>
+            <div className="md:relative">
+              {" "}
+              <input
+                type="text"
+                placeholder="Enter email adddress"
+                className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg md:text-left md:px-8 md:w-3/4"
+              />
+              <PrimaryButton className="text-white md:absolute md:right-14 md:z-10 md:px-8">
+                Schedule a Demo
+              </PrimaryButton>
+            </div>
+          </div>
+          <p className="pt-6">
             Have any questions?{" "}
             <a className="font-bold" href="#">
               Contact Us
