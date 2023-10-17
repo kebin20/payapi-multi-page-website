@@ -6,7 +6,7 @@ import TickIcon from "@/components/UI/TickIcon";
 
 function Pricing() {
   return (
-    <div className="secondary-main">
+    <div className="pricing-main">
       <NavBar />
       <main className="text-blue">
         <h1 className="text-3xl text-center font-bold md:text-5xl md:pt-6">

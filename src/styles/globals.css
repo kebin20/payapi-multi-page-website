@@ -30,15 +30,30 @@ body {
   }
 }
 
-.secondary-main {
+.pricing-main {
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: right 130% top -32%; 
+  background-position: right 130% top -32%;
 }
 
 @media only screen and (min-width: 600px) {
-  .secondary-main {
+  .pricing-main {
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: right -100% top -38%;
+  }
+}
+
+.about-main {
+  background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right 130% top -32%;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-main {
     background-repeat: no-repeat;
     background-size: 65%;
     background-position: right -100% top -38%;
@@ -49,7 +64,7 @@ body {
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: right 130% top -122%;
+  background-position: left -24% bottom 154%;
 }
 
 .bg-pattern-circle-hero {
