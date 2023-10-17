@@ -34,7 +34,15 @@ body {
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: right 130% top -32%;
+  background-position: right 130% top -32%; 
+}
+
+@media only screen and (min-width: 600px) {
+  .secondary-main {
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: right -100% top -38%;
+  }
 }
 
 .contact-main {
