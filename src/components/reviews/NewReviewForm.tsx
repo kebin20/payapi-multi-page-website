@@ -44,7 +44,7 @@ function NewReviewForm({ onAddReview }) {
           id="description"
           required
           rows="5"
-          ref={commentInputRefInputRef}
+          ref={commentInputRef}
         ></textarea>
       </div>
       <div>
