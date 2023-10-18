@@ -9,7 +9,7 @@ import GoogleImage from "../assets/shared/desktop/google-dark.svg";
 import MicrosoftImage from "../assets/shared/desktop/microsoft-dark.svg";
 import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
-import { PrimaryButton, SecondaryButton } from "@/components/UI/Buttons";
+import { SecondaryButton } from "@/components/UI/Buttons";
 
 function Contact() {
   const companyLogos: any = [
@@ -86,12 +86,7 @@ function Contact() {
             <label htmlFor="" className="opacity-50">
               Message
             </label>
-            <textarea
-              className="bg-transparent"
-              type="text"
-              id="message"
-              name="message"
-            />
+            <textarea className="bg-transparent" id="message" name="message" />
           </div>
 
           <div className="flex gap-6 opacity-100 my-4">
