@@ -8,6 +8,7 @@ function ReviewList({ reviews }) {
           key={review.id}
           id={review.id}
           title={review.title}
+          name={review.name}
           comment={review.comment}
           date={review.date}
         />
