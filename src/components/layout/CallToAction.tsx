@@ -2,7 +2,7 @@ import { PrimaryButton } from "../UI/Buttons";
 
 export default function CallToAction() {
   return (
-    <section className="mx-6 mb-20 grid gap-8 text-center">
+    <section className="mx-6 mb-24 grid gap-8 text-center">
       <h2 className="text-3xl  text-blue font-bold leading-9 mx-4 md:text-5xl">
         Ready to start?
       </h2>
