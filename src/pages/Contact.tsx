@@ -25,10 +25,13 @@ function Contact() {
     <div className="contact-main">
       <NavBar />
       <main>
-        <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6">
+        <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6 md:text-5xl md:mx-44 md:mt-10">
           Submit a help request and we’ll get in touch shortly.
         </h1>
-        <form className="flex flex-col gap-4 text-blue mx-6 my-14" action="">
+        <form
+          className="flex flex-col gap-4 text-blue mx-6 my-14 md:mx-44"
+          action=""
+        >
           <div className="flex justify-between border-b-2 border-blue border-opacity-30 p-5">
             {" "}
             <label htmlFor="name" className="opacity-50">
@@ -108,11 +111,11 @@ function Contact() {
             Submit
           </SecondaryButton>
         </form>
-        <section className="grid justify-items-center gap-8 text-center px-10 py-14">
-          <h2 className="text-blue text-2xl font-bold">
+        <section className="grid justify-items-center gap-8 text-center px-10 py-14 md:pt-0 md:mb-10">
+          <h2 className="text-blue text-2xl font-bold md:mx-40">
             Join the thousands of innovators already building with us
           </h2>
-          <div className="grid grid-cols-2 gap-14">
+          <div className="grid grid-cols-2 gap-14 md:grid-cols-3">
             {companyLogos.map((logo: any, index: number) => {
               return <Image key={index} src={logo.src} alt={logo.alt} />;
             })}
