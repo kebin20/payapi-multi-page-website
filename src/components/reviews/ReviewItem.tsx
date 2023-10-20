@@ -1,4 +1,12 @@
-function ReviewItem({ title, name, comment, date }) {
+import { useRouter } from "next/router";
+
+function ReviewItem({ id, title, name, comment, date }) {
+  const router = useRouter();
+
+  function showFullReviewHandler() {
+    router.push("/" + id);
+  }
+
   return (
     <>
       <li>
@@ -6,6 +14,7 @@ function ReviewItem({ title, name, comment, date }) {
         <p>By {name}</p>
         <span>{date}</span>
         <p>{comment}</p>
+        <button onClick={showFullReviewHandler}>See Full Review</button>
       </li>
     </>
   );
