@@ -67,6 +67,14 @@ body {
   background-position: left -24% bottom 154%;
 }
 
+@media only screen and (min-width: 600px) {
+  .contact-main {
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: right -135% top -26%;
+  }
+}
+
 .bg-pattern-circle-hero {
   background-image: url(../assets/shared/desktop/bg-pattern-circle-dark.svg);
   background-repeat: no-repeat;
