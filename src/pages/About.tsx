@@ -11,7 +11,7 @@ function About() {
     <div className="about-main">
       <NavBar />
       <main>
-        <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6 md:text-5xl md:mx-20 md:mt-16">
+        <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6 md:text-5xl md:mx-20 md:mt-8 md:tracking-tight">
           We empower innovators by delivering access to the financial system
         </h1>
         {/* <section className="grid grid-cols-1 text-center justify-center gap-8 mt-16 mx-8 mb-20 md:grid-cols-2 md:text-left"> */}
@@ -52,14 +52,14 @@ function About() {
             src={TeamMembersDesktopImage}
             className="hidden md:block"
           />
-          <ul className="flex flex-col justify-center text-center gap-4 border-y-2 border-gray p-6 my-10 mx-10 md:flex-row md:text-left md:justify-between">
-            <li>
+          <ul className="flex flex-col justify-center text-center gap-4 border-y-2 border-gray p-6 my-10 mx-10 md:flex-row md:text-left md:border-y-0 md:gap-4 md:mx-6 md:p-0">
+            <li className="md:border-y-2 md:pt-4 md:pr-10 md:w-full md:self-end">
               <h3 className="text-blue font-sans opacity-70">Team Members</h3>
               <p className="text-dark-pink font-serif text-750 font-bold opacity-100">
                 300+
               </p>
             </li>
-            <li>
+            <li className="md:border-y-2 md:pt-4 md:pr-10 md:w-full md:self-end">
               <h3 className="text-blue font-sans opacity-70">
                 Offices in the US
               </h3>
@@ -67,7 +67,7 @@ function About() {
                 3
               </p>
             </li>
-            <li>
+            <li className="md:border-y-2 md:pt-4 md:pr-10 md:w-full md:self-end">
               <h3 className="text-blue font-sans opacity-70">
                 Transactions analyzed
               </h3>
