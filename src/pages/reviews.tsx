@@ -27,13 +27,22 @@ const DUMMY_REVIEWS = [
   },
 ];
 
-function Reviews() {
+function Reviews(props) {
   return (
     <>
       <h1>Testimonials</h1>
-      <ReviewList reviews={DUMMY_REVIEWS} />
+      <ReviewList reviews={props.reviews} />
     </>
   );
 }
 
 export default Reviews;
+
+export async function getStaticProps() {
+  // fetch data from an API
+  return {
+    props: {
+      reviews: DUMMY_REVIEWS,
+    },
+  };
+}
