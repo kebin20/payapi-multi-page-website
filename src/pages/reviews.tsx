@@ -28,7 +28,12 @@ const DUMMY_REVIEWS = [
 ];
 
 function Reviews() {
-  return <ReviewList reviews={DUMMY_REVIEWS} />;
+  return (
+    <>
+      <h1>Testimonials</h1>
+      <ReviewList reviews={DUMMY_REVIEWS} />
+    </>
+  );
 }
 
 export default Reviews;
