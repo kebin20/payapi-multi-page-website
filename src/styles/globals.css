@@ -24,9 +24,15 @@ body {
 
 @media only screen and (min-width: 600px) {
   .index-main {
-    background-repeat: no-repeat;
     background-size: 143%;
     background-position: right 50% top -38%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .index-main {
+    background-size: 50%;
+    background-position: right -15% top -11%;
   }
 }
 
@@ -39,7 +45,6 @@ body {
 
 @media only screen and (min-width: 600px) {
   .pricing-main {
-    background-repeat: no-repeat;
     background-size: 65%;
     background-position: right -100% top -38%;
   }
@@ -54,7 +59,6 @@ body {
 
 @media only screen and (min-width: 600px) {
   .about-main {
-    background-repeat: no-repeat;
     background-size: 70%;
     background-position: right -135% top -25%;
   }
@@ -69,7 +73,6 @@ body {
 
 @media only screen and (min-width: 600px) {
   .contact-main {
-    background-repeat: no-repeat;
     background-size: 70%;
     background-position: right -135% top -26%;
   }
@@ -87,6 +90,12 @@ body {
   background-repeat: no-repeat;
   background-size: 50rem;
   background-position: right 50% top -35.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-pattern-circle-company {
+    background-position: right 133% top -18.5rem;
+  }
 }
 
 .bg-pattern-circle-footer {
