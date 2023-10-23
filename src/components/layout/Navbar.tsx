@@ -25,12 +25,12 @@ export default function NavBar() {
     px-6 py-8
     "
     >
-      <nav className="flex items-center justify-between">
+      <nav className="flex items-center justify-between lg:gap-20 lg:mx-44 lg:mt-2">
         <Link onClick={() => setToggle(false)} href="/">
           <Image src={payAPILogo} alt="pay API logo" />
         </Link>
 
-        <ul className="hidden md:flex md:items-center md: gap-16">
+        <ul className="hidden md:flex md:items-center md:gap-16 ">
           {navItems.map((item, index) => (
             <NavigationItem
               key={index}
@@ -41,7 +41,7 @@ export default function NavBar() {
             </NavigationItem>
           ))}
         </ul>
-        <PrimaryButton className="hidden rounded-full md:block md:px-6">
+        <PrimaryButton className="hidden rounded-full md:block md:px-6 lg:ml-auto">
           Schedule a Demo
         </PrimaryButton>
 
