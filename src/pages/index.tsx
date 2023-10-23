@@ -49,9 +49,9 @@ export default function Home() {
             src={PhoneMockup}
             className="w-2/5 m-auto lg:w-3/5 lg:ml-auto order-first lg:order-last"
           />
-          <div className="flex flex-col gap-6 md:px-14 lg:p-0 lg:justify-center">
+          <div className="flex flex-col gap-6 md:px-14 lg:p-0 lg:justify-center lg:gap-8">
             {" "}
-            <h1 className="text-3xl text-blue font-bold leading-9 mx-4 md:text-5xl md:mx-10 lg:text-7xl lg:text-left lg:mx-0">
+            <h1 className="text-3xl tracking-tight text-blue font-bold leading-9 mx-4 md:text-5xl md:mx-10 lg:text-7xl lg:text-left lg:mx-0">
               Start building with our APIs for absolutely free.
             </h1>
             <div className="flex flex-col gap-4 md:relative">
@@ -61,7 +61,7 @@ export default function Home() {
                 placeholder="Enter email adddress"
                 className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg md:text-left md:px-8 md:w-3/4 lg:w-1/2"
               />
-              <PrimaryButton className="text-white md:absolute md:right-14 md:z-10 md:px-8">
+              <PrimaryButton className="text-white md:absolute md:right-14 md:z-10 md:px-8 lg:right-36">
                 Schedule a Demo
               </PrimaryButton>
             </div>
