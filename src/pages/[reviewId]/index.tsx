@@ -1,11 +1,32 @@
-function FullReview() {
+import FullReviewDetail from "@/components/reviews/FullReview";
+
+function FullReviewDetails() {
   return (
     <>
-      <span>⭐⭐⭐⭐</span>
-      <h1>Some Review Here</h1>
-      <p>By Someone</p>
-      <span>1st January 2000</span>
-      <p>Full comment here</p>
+      <FullReviewDetail stars="" title="" author="" date="" comment="" />
     </>
   );
 }
+
+export async function getStaticProps(context) {
+  //fetch data for a single review
+
+  const reviewId = context.params.reviewId;
+
+  console.log(reviewId);
+
+  return {
+    props: {
+      reviewData: {
+        id: reviewId,
+        stars: "",
+        title: "",
+        author: "",
+        date: "",
+        comment: "",
+      },
+    },
+  };
+}
+
+export default FullReviewDetails;
