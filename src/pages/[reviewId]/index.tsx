@@ -3,7 +3,7 @@ import FullReviewDetail from "@/components/reviews/FullReview";
 function FullReviewDetails() {
   return (
     <>
-      <FullReviewDetail stars="" title="" author="" date="" comment="" />
+      <FullReviewDetail title="" author="" date="" comment="" />
     </>
   );
 }
