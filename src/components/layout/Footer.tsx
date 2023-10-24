@@ -11,25 +11,26 @@ function Footer() {
 
   return (
     <footer className="bg-dark-blue flex flex-col items-center bg-pattern-circle-footer md:flex-row md:justify-around">
-      <Link href="/">
-        <Image
-          src={whitePayAPILogo}
-          alt="pay API logo"
-          className="m-14 md:m-2"
-        />
-      </Link>
-
-      <ul className="flex flex-col items-center gap-8 text-white font-bold md:flex-row">
-        {navItems.map((item, index) => (
-          <NavigationItem
-            key={index}
-            href={`/${item}`}
-            className="md:text-white"
-          >
-            {item}
-          </NavigationItem>
-        ))}
-      </ul>
+      <div className="lg:flex lg:gap-12">
+        <Link href="/">
+          <Image
+            src={whitePayAPILogo}
+            alt="pay API logo"
+            className="m-14 md:m-2"
+          />
+        </Link>
+        <ul className="flex flex-col items-center gap-8 text-white font-bold md:flex-row">
+          {navItems.map((item, index) => (
+            <NavigationItem
+              key={index}
+              href={`/${item}`}
+              className="md:text-white"
+            >
+              {item}
+            </NavigationItem>
+          ))}
+        </ul>
+      </div>
       <div className="flex gap-8 p-10">
         <Image src={faceBookLogo} alt="Facebook logo" />
         <Image src={TwitterLogo} alt="Twitter logo" />

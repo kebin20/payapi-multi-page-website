@@ -79,9 +79,9 @@ export default function Home() {
               return <Image key={index} src={logo.src} alt={logo.alt} />;
             })}
           </div>
-          <div className="flex flex-col gap-8 lg:text-left lg:items-start lg:mx-32">
+          <div className="flex flex-col gap-8 lg:text-left lg:items-start lg:w-2/3">
             {" "}
-            <h2 className="mt-10 text-4xl font-bold md:text-5xl ">
+            <h2 className="mt-10 text-4xl font-bold md:text-5xl lg:mt-0">
               Who we work with
             </h2>
             <p className="leading-7 md:mx-32 lg:m-0">
@@ -93,32 +93,45 @@ export default function Home() {
             <SecondaryButton>about us</SecondaryButton>
           </div>
         </section>
-        <section className="my-20 mx-6 grid gap-4 justify-items-center text-center">
-          <Image
-            src={EasyMockup}
-            alt="easy to implement UI"
-            className="md:max-w-md"
-          />
-          <h2 className="text-blue text-4xl font-bold">Easy to implement</h2>
-          <p className="md:mx-20">
-            Our API comes with just a few lines of code. You’ll be up and
-            running in no time. We built our documentation page to integrate
-            payments functionality with ease.
-          </p>
+
+        <section className="bg-pattern-circle-feature">
+          <div className="my-20 mx-6 flex flex-col gap-4 items-center text-center lg:flex-row lg:justify-center">
+            <Image
+              src={EasyMockup}
+              alt="easy to implement UI"
+              className="md:max-w-md lg:max-w-screen-lg"
+            />
+            <div className="lg:text-left lg:w-1/3">
+              {" "}
+              <h2 className="text-blue text-4xl font-bold lg:text-5xl">
+                Easy to implement
+              </h2>
+              <p className="lg:mt-4">
+                Our API comes with just a few lines of code. You’ll be up and
+                running in no time. We built our documentation page to integrate
+                payments functionality with ease.
+              </p>
+            </div>
+          </div>
+          <div className="my-20 mx-6 flex flex-col gap-4 items-center text-center lg:flex-row lg:justify-center">
+            <Image
+              src={SimpleUIMockup}
+              alt="easy to implement UI"
+              className="md:max-w-md order-first lg:order-last lg:max-w-screen-lg"
+            />
+            <div className="lg:text-left lg:w-1/3">
+              <h2 className="text-blue text-4xl font-bold lg:text-5xl">
+                Simple UI & UX
+              </h2>
+              <p className="lg:mt-4">
+                Our pre-built form is easy to integrate in your app or website’s
+                checkout flow and designed to optimize conversion.
+              </p>
+            </div>
+          </div>
         </section>
-        <section className="my-20 mx-6 grid gap-4 justify-items-center text-center">
-          <Image
-            src={SimpleUIMockup}
-            alt="easy to implement UI"
-            className="md:max-w-md"
-          />
-          <h2 className="text-blue text-4xl font-bold">Simple UI & UX</h2>
-          <p className="md:mx-20">
-            Our pre-built form is easy to integrate in your app or website’s
-            checkout flow and designed to optimize conversion.
-          </p>
-        </section>
-        <section className="my-20 mx-8 grid gap-12 justify-items-center text-center md:grid-cols-3 md:gap-6">
+
+        <section className="my-20 mx-8 grid gap-12 justify-items-center text-center md:grid-cols-3 md:gap-6 lg:mx-36">
           <div className="flex flex-col items-center gap-8 md:gap-6">
             <Image
               src={PersonalFinances}

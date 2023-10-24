@@ -94,7 +94,16 @@ body {
 
 @media only screen and (min-width: 768px) {
   .bg-pattern-circle-company {
-    background-position: right 133% top -18.5rem;
+    background-position: right 127% top -22.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-pattern-circle-feature {
+    background-image: url(../assets/shared/desktop/bg-pattern-circle-dark.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right -39% top 24.5rem;
   }
 }
 
@@ -103,6 +112,12 @@ body {
   background-repeat: no-repeat;
   background-size: 50rem;
   background-position: right 50% top 13.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-pattern-circle-footer {
+    background-position: right -27% top -6.5rem;
+  }
 }
 
 h1,
