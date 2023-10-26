@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 
 import NewReviewForm from "@/components/reviews/NewReviewForm";
+import Head from "next/head";
 
 function NewReviewPage() {
   const router = useRouter();
@@ -21,7 +22,15 @@ function NewReviewPage() {
     router.push("/");
   }
 
-  return <NewReviewForm onAddReview={addReviewHandler} />;
+  return (
+    <>
+      <Head>
+        <title>Add a new review</title>
+        <meta name="description" content="See what our clients have to say!" />
+      </Head>
+      <NewReviewForm onAddReview={addReviewHandler} />;
+    </>
+  );
 }
 
 export default NewReviewPage;
