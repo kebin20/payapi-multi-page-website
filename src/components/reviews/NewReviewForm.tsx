@@ -1,18 +1,23 @@
 import { useRef } from "react";
+import ReviewData from "../../models";
 
-function NewReviewForm({ onAddReview }) {
-  const titleInputRef = useRef();
-  const nameInputRef = useRef();
-  const dateInputRef = useRef();
-  const commentInputRef = useRef();
+function NewReviewForm({
+  onAddReview,
+}: {
+  onAddReview: (reviewData: ReviewData) => void;
+}) {
+  const titleInputRef = useRef<HTMLInputElement>(null);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const dateInputRef = useRef<HTMLInputElement>(null);
+  const commentInputRef = useRef<HTMLTextAreaElement>(null);
 
-  function submitHandler(event) {
+  function submitHandler(event: { preventDefault: () => void }) {
     event.preventDefault();
 
-    const enteredTitle = titleInputRef.current.value;
-    const enteredName = nameInputRef.current.value;
-    const enteredDate = dateInputRef.current.value;
-    const enteredComment = commentInputRef.current.value;
+    const enteredTitle = titleInputRef.current?.value;
+    const enteredName = nameInputRef.current?.value;
+    const enteredDate = dateInputRef.current?.value;
+    const enteredComment = commentInputRef.current?.value;
 
     const reviewData = {
       title: enteredTitle,
@@ -43,7 +48,7 @@ function NewReviewForm({ onAddReview }) {
         <textarea
           id="description"
           required
-          rows="5"
+          rows={parseInt("5")}
           ref={commentInputRef}
         ></textarea>
       </div>

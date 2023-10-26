@@ -1,6 +1,7 @@
+import ReviewData from "@/models";
 import { useRouter } from "next/router";
 
-function ReviewItem({ id, title, name, comment, date }) {
+function ReviewItem({ id, title, name, comment, date }: ReviewData) {
   const router = useRouter();
 
   function showFullReviewHandler() {
