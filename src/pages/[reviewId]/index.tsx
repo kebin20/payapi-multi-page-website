@@ -1,9 +1,15 @@
 import FullReviewDetail from "@/components/reviews/FullReview";
 import { MongoClient, ObjectId } from "mongodb";
+import Head from "next/head";
 
 function FullReviewDetails(props) {
   return (
     <>
+      <Head>
+        <title>{props.reviewData.title}</title>
+        <meta name="description" content={props.reviewData.comment} />
+      </Head>
+
       <FullReviewDetail
         title={props.title}
         author={props.author}
@@ -29,7 +35,7 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    fallback: false,
+    fallback: 'blocking',
     paths: reviews.map((review) => ({
       params: { reviewId: review._id.toString() },
     })),
@@ -38,7 +44,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   //fetch data for a single review
-
   const reviewId = context.params.reviewId;
 
   const client = await MongoClient.connect(
