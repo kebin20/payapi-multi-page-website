@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SecondaryButton } from "../UI/Buttons";
 
-function ContactForm() {
+function ContactForm({ addContact }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,13 +17,16 @@ function ContactForm() {
     });
   }
 
-  console.log(formData.name, formData.email);
+  function handleSubmit(e) {
+    e.preventDefault();
+    addContact(formData);
+  }
 
   return (
     <>
       <form
         className="flex flex-col gap-4 text-blue mx-6 my-14 md:mx-44"
-        action=""
+        onSubmit={handleSubmit}
       >
         <div className="flex justify-between border-b-2 border-blue border-opacity-30 p-5">
           {" "}

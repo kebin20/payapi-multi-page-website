@@ -11,6 +11,7 @@ import GoogleImage from "../assets/shared/desktop/google-dark.svg";
 import MicrosoftImage from "../assets/shared/desktop/microsoft-dark.svg";
 import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
+import { useState } from "react";
 
 function Contact() {
   const companyLogos: any = [
@@ -22,6 +23,26 @@ function Contact() {
     { src: NvidiaImage, alt: "Nvidia logo" },
   ];
 
+  const [contactDetails, setContactDetails] = useState([
+    {
+      id: "",
+      name: "",
+      email: "",
+      company: "",
+      title: "",
+      message: "",
+      subscribe: true,
+    },
+  ]);
+
+  function addContact(contact) {
+    setContactDetails((currContacts) => {
+      return [...currContacts, { ...contact }];
+    });
+  }
+
+  console.log(contactDetails);
+
   return (
     <div className="contact-main">
       <NavBar />
@@ -29,7 +50,7 @@ function Contact() {
         <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6 md:text-5xl md:mx-44 md:mt-10">
           Submit a help request and we’ll get in touch shortly.
         </h1>
-        <ContactForm />
+        <ContactForm addContact={addContact} />
         <section className="grid justify-items-center gap-8 text-center px-10 py-14 md:pt-0 md:mb-10">
           <h2 className="text-blue text-2xl font-bold md:mx-40">
             Join the thousands of innovators already building with us
