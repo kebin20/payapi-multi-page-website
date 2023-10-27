@@ -11,12 +11,12 @@ function Footer() {
 
   return (
     <footer className="bg-dark-blue flex flex-col items-center bg-pattern-circle-footer md:flex-row md:justify-around">
-      <div className="lg:flex lg:gap-12">
+      <div className="lg:flex lg:gap-12 container">
         <Link href="/">
           <Image
             src={whitePayAPILogo}
             alt="pay API logo"
-            className="m-14 md:m-2"
+            className="m-14 md:m-2 lg:ml-12"
           />
         </Link>
         <ul className="flex flex-col items-center gap-8 text-white font-bold md:flex-row">

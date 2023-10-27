@@ -25,7 +25,7 @@ export default function NavBar() {
     px-6 py-8
     "
     >
-      <nav className="flex items-center justify-between lg:gap-20 lg:mx-44 lg:mt-2">
+      <nav className="flex items-center justify-between lg:gap-20 lg:mx-36 lg:mt-2">
         <Link onClick={() => setToggle(false)} href="/">
           <Image src={payAPILogo} alt="pay API logo" />
         </Link>

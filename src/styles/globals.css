@@ -50,6 +50,13 @@ body {
   }
 }
 
+@media only screen and (min-width: 786px) {
+  .pricing-main {
+    background-size: auto;
+    background-position: right -19% top -110%;
+  }
+}
+
 .about-main {
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
