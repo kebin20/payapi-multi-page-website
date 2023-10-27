@@ -3,7 +3,7 @@ import payAPILogo from "../../assets/shared/desktop/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
 import NavigationItem from "./NavigationItem";
-import Hamburger from "./Hamburger";
+import Hamburger from "../UI/Hamburger";
 import { PrimaryButton } from "../UI/Buttons";
 
 export default function NavBar() {
