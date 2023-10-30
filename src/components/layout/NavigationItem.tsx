@@ -14,7 +14,7 @@ function NavigationItem({
 }) {
   return (
     <li
-      className={`w-4/5 text-center text-white opacity-60 font-bold ${className}`}
+      className={`text-center text-white opacity-60 font-bold ${className} md:w-4/5 `}
     >
       <Link onClick={onClick} href={href}>
         {children}

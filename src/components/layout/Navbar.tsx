@@ -47,7 +47,7 @@ export default function NavBar() {
 
         {toggle && (
           <>
-            <ul className="bg-dark-blue fixed top-0 right-0 bottom-0 w-72 h-screen flex flex-col items-center gap-5 transform -translate-x opacity-1 z-10 transition-transform duration-40 pt-24 bg-pattern-circle-hero">
+            <ul className="bg-dark-blue text-xl fixed top-0 right-0 bottom-0 w-72 h-screen flex flex-col items-center gap-8 transform -translate-x opacity-1 z-10 transition-transform duration-40 pt-24 bg-pattern-circle-hero">
               <span className="w-60 h-0.5 rounded-sm bg-white opacity-5"></span>
               {navItems.map((item, index) => (
                 <NavigationItem
@@ -59,7 +59,9 @@ export default function NavBar() {
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                 </NavigationItem>
               ))}
-              <PrimaryButton>Schedule a Demo</PrimaryButton>
+              <PrimaryButton className="text-base">
+                Schedule a Demo
+              </PrimaryButton>
             </ul>
           </>
         )}
