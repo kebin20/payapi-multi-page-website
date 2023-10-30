@@ -43,15 +43,15 @@ export default function Home() {
       </Head>
       <NavBar />
       <main>
-        <section className="mx-6 grid text-center lg:grid-cols-2 lg:mx-48">
+        <section className="mx-8 grid text-center justify-items-center lg:grid-cols-2 lg:mx-48">
           <Image
             alt="build your apis for free"
             src={PhoneMockup}
-            className="w-2/5 m-auto lg:w-3/5 lg:ml-auto order-first lg:order-last"
+            className="w-1/2 ml-4 lg:w-3/5 lg:ml-auto order-first lg:order-last"
           />
           <div className="flex flex-col gap-6 md:px-14 lg:p-0 lg:justify-center lg:gap-8">
             {" "}
-            <h1 className="text-3xl tracking-tight text-blue font-bold leading-9 mx-4 md:text-5xl md:mx-10 lg:text-7xl lg:text-left lg:mx-0">
+            <h1 className="text-550 mx-2 tracking-tight text-blue font-bold leading-9 md:text-5xl md:mx-10 lg:text-7xl lg:text-left lg:mx-0">
               Start building with our APIs for absolutely free.
             </h1>
             <div className="flex flex-col gap-4 md:relative">
@@ -74,7 +74,7 @@ export default function Home() {
           </div>
         </section>
         <section className=" bg-dark-blue my-20 grid justify-items-center gap-8 text-center text-white px-10 py-28 bg-pattern-circle-company lg:grid-cols-2 lg:gap-0 ">
-          <div className="grid grid-cols-2 gap-14 md:grid-cols-3  lg:ml-auto order-first lg:order-last lg:items-center lg:align-center lg:m-auto">
+          <div className="grid grid-cols-2 gap-14 items-center md:grid-cols-3  lg:ml-auto order-first lg:order-last lg:items-center lg:align-center lg:m-auto">
             {companyLogos.map((logo: any, index: number) => {
               return <Image key={index} src={logo.src} alt={logo.alt} />;
             })}
@@ -99,35 +99,30 @@ export default function Home() {
             <Image
               src={EasyMockup}
               alt="easy to implement UI"
-              className="md:max-w-md lg:max-w-screen-lg"
+              className="max-w-[475px] ml-9 md:max-w-md order-first lg:order-last lg:max-w-screen-lg"
             />
-            <div className="lg:text-left lg:w-1/3">
-              {" "}
-              <h2 className="text-blue text-4xl font-bold lg:text-5xl">
-                Easy to implement
-              </h2>
-              <p className="lg:mt-4">
-                Our API comes with just a few lines of code. You’ll be up and
-                running in no time. We built our documentation page to integrate
-                payments functionality with ease.
-              </p>
-            </div>
+            <h2 className="text-blue text-4xl font-bold lg:text-5xl">
+              Easy to implement
+            </h2>
+            <p>
+              Our API comes with just a few lines of code. You’ll be up and
+              running in no time. We built our documentation page to integrate
+              payments functionality with ease.
+            </p>
           </div>
           <div className="my-20 mx-6 flex flex-col gap-4 items-center text-center lg:flex-row lg:justify-center">
             <Image
               src={SimpleUIMockup}
               alt="easy to implement UI"
-              className="md:max-w-md order-first lg:order-last lg:max-w-screen-lg"
+              className="max-w-[435px] ml-9 md:max-w-md order-first lg:order-last lg:max-w-screen-lg"
             />
-            <div className="lg:text-left lg:w-1/3">
-              <h2 className="text-blue text-4xl font-bold lg:text-5xl">
-                Simple UI & UX
-              </h2>
-              <p className="lg:mt-4">
-                Our pre-built form is easy to integrate in your app or website’s
-                checkout flow and designed to optimize conversion.
-              </p>
-            </div>
+            <h2 className="text-blue text-4xl font-bold lg:text-5xl">
+              Simple UI & UX
+            </h2>
+            <p>
+              Our pre-built form is easy to integrate in your app or website’s
+              checkout flow and designed to optimize conversion.
+            </p>
           </div>
         </section>
 
@@ -137,7 +132,9 @@ export default function Home() {
               src={PersonalFinances}
               alt={"sort your personal finances easily"}
             />
-            <h3 className="text-lg font-bold font-sans">Personal Finances</h3>
+            <h3 className="text-lg text-blue font-bold font-sans">
+              Personal Finances
+            </h3>
             <p>
               Consolidate financial data from multiple sources and categorize
               transactions up to 2 years of history. Analyze reports to
@@ -146,7 +143,9 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center gap-8 md:gap-6">
             <Image src={BankingCoverage} alt={"explore our banking services"} />
-            <h3 className="text-lg font-bold font-sans">Banking & Coverage</h3>
+            <h3 className="text-lg text-blue font-bold font-sans">
+              Banking & Coverage
+            </h3>
             <p>
               With our platform, you can speed up account onboarding and support
               ongoing payments for checking, savings, credit card, and brokerage
@@ -155,7 +154,9 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center gap-8 md:gap-6">
             <Image src={ConsumerPayments} alt={"set up secure payments"} />
-            <h3 className="text-lg font-bold font-sans">Consumer Payments</h3>
+            <h3 className="text-lg text-blue font-bold font-sans">
+              Consumer Payments
+            </h3>
             <p>
               It’s easier to set up secure bank payments with us through a flow
               designed with the user experience in mind. Customers could
