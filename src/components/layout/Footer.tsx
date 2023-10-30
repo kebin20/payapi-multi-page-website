@@ -11,7 +11,7 @@ function Footer() {
 
   return (
     <footer className="bg-dark-blue flex flex-col items-center bg-pattern-circle-footer md:flex-row md:justify-around">
-      <div className="lg:flex lg:gap-12 container">
+      <div className="flex flex-col items-center">
         <Link href="/">
           <Image
             src={whitePayAPILogo}
@@ -19,7 +19,7 @@ function Footer() {
             className="m-14 md:m-2 lg:ml-12"
           />
         </Link>
-        <ul className="flex flex-col items-center gap-8 text-white font-bold md:flex-row">
+        <ul className="flex flex-col gap-8 text-white font-bold md:flex-row">
           {navItems.map((item, index) => (
             <NavigationItem
               key={index}
