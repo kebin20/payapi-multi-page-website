@@ -11,7 +11,7 @@ function Footer() {
 
   return (
     <footer className="bg-dark-blue flex flex-col items-center bg-pattern-circle-footer md:flex-row md:justify-around">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center md:flex-row md:gap-12">
         <Link href="/">
           <Image
             src={whitePayAPILogo}
