@@ -12,12 +12,12 @@ function About() {
       <NavBar />
       <main>
         <section className="flex flex-col gap-14 text-center mt-16 mx-8 mb-20 md:text-left lg:mt-0 lg:mx-64">
-          <h1 className="text-4xl text-center tracking-tight text-blue font-bold leading-9 md:text-5xl lg:text-750 lg:text-left lg:pr-80">
+          <h1 className="text-4xl text-center tracking-tight text-blue font-bold leading-9 md:text-5xl md:mx-28 lg:text-750 lg:text-left lg:pr-80">
             We empower innovators by delivering access to the financial system
           </h1>
           <div className="flex flex-col gap-6 md:flex-row">
             {" "}
-            <h2 className="text-blue text-2xl font-bold md:text-3xl lg:w-full">
+            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-full">
               Our Vision
             </h2>
             <p>
@@ -29,7 +29,7 @@ function About() {
             </p>
           </div>
           <div className="flex flex-col gap-6 md:flex-row">
-            <h2 className="text-blue text-2xl font-bold md:text-3xl lg:w-10/12">
+            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-10/12">
               Our Business
             </h2>
             <p>

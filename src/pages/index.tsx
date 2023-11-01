@@ -43,15 +43,15 @@ export default function Home() {
       </Head>
       <NavBar />
       <main>
-        <section className="mx-8 grid text-center justify-items-center lg:grid-cols-2 lg:mx-48">
+        <section className="mx-8 grid text-center justify-items-center  lg:grid-cols-2 lg:mx-48">
           <Image
             alt="build your apis for free"
             src={PhoneMockup}
-            className="w-1/2 ml-4 lg:w-3/5 lg:ml-auto order-first lg:order-last"
+            className="w-1/2 ml-4 md:w-2/5 md:ml-14 lg:w-3/5 lg:ml-auto order-first lg:order-last"
           />
           <div className="flex flex-col gap-6 md:px-14 lg:p-0 lg:justify-center lg:gap-8">
             {" "}
-            <h1 className="text-550 mx-2 tracking-tight text-blue font-bold leading-9 md:text-5xl md:mx-10 lg:text-7xl lg:text-left lg:mx-0">
+            <h1 className="text-550 mx-2 tracking-tight text-blue font-bold leading-9 md:text-5xl md:mx-10 md:mb-4 lg:text-7xl lg:text-left lg:mx-0">
               Start building with our APIs for absolutely free.
             </h1>
             <div className="flex flex-col gap-4 md:relative">
@@ -59,9 +59,9 @@ export default function Home() {
               <input
                 type="text"
                 placeholder="Enter email adddress"
-                className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg md:text-left md:px-8 md:w-3/4 lg:w-1/2"
+                className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg md:text-left md:px-8 md:mx-24 md:w-1/2"
               />
-              <PrimaryButton className="text-white md:absolute md:right-14 md:z-10 md:px-8 lg:right-36">
+              <PrimaryButton className="text-white md:absolute md:right-20 md:z-10 md:px-8 lg:right-36">
                 Schedule a Demo
               </PrimaryButton>
             </div>
@@ -73,8 +73,8 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section className=" bg-dark-blue my-20 grid justify-items-center gap-8 text-center text-white px-10 py-28 bg-pattern-circle-company lg:grid-cols-2 lg:gap-0 ">
-          <div className="grid grid-cols-2 gap-14 items-center md:grid-cols-3  lg:ml-auto order-first lg:order-last lg:items-center lg:align-center lg:m-auto">
+        <section className=" bg-dark-blue my-28 px-10 py-28 grid justify-items-center gap-8 text-center text-white  bg-pattern-circle-company lg:grid-cols-2 lg:gap-0 ">
+          <div className="grid grid-cols-2 gap-14 items-center md:grid-cols-3 md:justify-items-center  lg:ml-auto order-first lg:order-last lg:items-center lg:align-center lg:m-auto">
             {companyLogos.map((logo: any, index: number) => {
               return <Image key={index} src={logo.src} alt={logo.alt} />;
             })}
@@ -84,24 +84,24 @@ export default function Home() {
             <h2 className="mt-10 text-4xl font-bold md:text-5xl lg:mt-0">
               Who we work with
             </h2>
-            <p className="leading-7 md:mx-32 lg:m-0">
+            <p className="leading-7 text-white md:mx-32 lg:m-0">
               Today, millions of people around the world have successfully
               connected their accounts to apps they love using our API. We
               provide developers with the tools they need to create easy and
               accessible experiences for their users.
             </p>
-            <SecondaryButton>about us</SecondaryButton>
+            <SecondaryButton className="self-center">about us</SecondaryButton>
           </div>
         </section>
 
-        <section className="bg-pattern-circle-feature">
+        <section className="sm:bg-pattern-circle-feature md:mx-20">
           <div className="my-20 mx-6 flex flex-col gap-4 items-center text-center lg:flex-row lg:justify-center">
             <Image
               src={EasyMockup}
               alt="easy to implement UI"
               className="max-w-[475px] ml-9 md:max-w-md order-first lg:order-last lg:max-w-screen-lg"
             />
-            <h2 className="text-blue text-4xl font-bold lg:text-5xl">
+            <h2 className="text-blue text-4xl font-bold md:text-700 lg:text-5xl">
               Easy to implement
             </h2>
             <p>
@@ -116,7 +116,7 @@ export default function Home() {
               alt="easy to implement UI"
               className="max-w-[435px] ml-9 md:max-w-md order-first lg:order-last lg:max-w-screen-lg"
             />
-            <h2 className="text-blue text-4xl font-bold lg:text-5xl">
+            <h2 className="text-blue text-4xl font-bold md:text-700 lg:text-5xl">
               Simple UI & UX
             </h2>
             <p>
