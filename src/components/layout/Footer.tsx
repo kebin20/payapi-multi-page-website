@@ -10,13 +10,13 @@ function Footer() {
   const navItems = ["Pricing", "About", "Contact"];
 
   return (
-    <footer className="bg-dark-blue flex flex-col items-center bg-pattern-circle-footer md:flex-row md:justify-around">
+    <footer className="bg-dark-blue flex flex-col items-center bg-pattern-circle-footer md:flex-row md:justify-around lg:gap-72">
       <div className="flex flex-col items-center md:flex-row md:gap-12">
         <Link href="/">
           <Image
             src={whitePayAPILogo}
             alt="pay API logo"
-            className="m-14 md:m-2 lg:ml-12"
+            className="m-14 md:m-2"
           />
         </Link>
         <ul className="flex flex-col gap-8 text-white font-bold md:flex-row">

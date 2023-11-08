@@ -10,7 +10,7 @@ export default function CallToAction() {
         <input
           type="text"
           placeholder="Enter email adddress"
-          className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg md:text-left md:px-8 md:w-3/5 lg:w-[40rem]"
+          className="bg-white font-bold px-14 py-3.5 rounded-3xl shadow-lg md:text-left md:px-8 md:w-3/5 lg:w-[30rem]"
         />
         <PrimaryButton className="text-white md:absolute md:right-36 md:z-10 md:px-8 lg:-right-2">
           Schedule a Demo

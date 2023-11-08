@@ -31,8 +31,8 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .index-main {
-    background-size: 130%;
-    background-position: right 50% top -29%;
+    background-size: auto;
+    background-position: right -16% top -6%;
   }
 }
 
@@ -105,26 +105,31 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
+  .bg-pattern-circle-company {
+    background-position: right 134% top -20rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   .bg-pattern-circle-feature {
     background-image: url(../assets/shared/desktop/bg-pattern-circle-dark.svg);
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: right -39% top 24.5rem;
+    background-position: right -62% top 24.5rem;
   }
 }
 
 .bg-pattern-circle-footer {
   background-image: url(../assets/shared/desktop/bg-pattern-circle-dark.svg);
   background-repeat: no-repeat;
-  background-size: 50rem;
-  background-position: right 50% top 13.5rem;
+  background-size: auto;
+  background-position: top 13% left 27rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .bg-pattern-circle-footer {
-    background-size: 70%;
-    background-position: right -63% top -6.5rem;
+    background-position: top 20% left 68rem;
   }
 }
 
