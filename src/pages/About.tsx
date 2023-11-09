@@ -11,11 +11,11 @@ function About() {
     <div className="about-main">
       <NavBar />
       <main>
-        <section className="flex flex-col gap-14 text-center mt-16 mx-8 mb-20 md:text-left lg:mt-0 lg:mx-64">
-          <h1 className="text-4xl text-center tracking-tight text-blue font-bold leading-9 md:text-5xl md:mx-28 lg:text-750 lg:text-left lg:pr-80">
+        <section className="flex flex-col gap-14 text-center mt-16 mx-8 mb-20 md:text-left lg:mt-10 lg:mx-60 ">
+          <h1 className="text-4xl text-center tracking-tight text-blue font-bold leading-9 md:text-5xl md:mx-28 lg:text-750 lg:text-left lg:mx-0 lg:pr-[23rem]">
             We empower innovators by delivering access to the financial system
           </h1>
-          <div className="flex flex-col gap-6 md:flex-row">
+          <div className="flex flex-col gap-6 md:flex-row ">
             {" "}
             <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-full">
               Our Vision
@@ -49,9 +49,9 @@ function About() {
           <Image
             alt="team members"
             src={TeamMembersDesktopImage}
-            className="hidden md:block md:w-full"
+            className="hidden md:block md:w-full "
           />
-          <ul className="flex flex-col justify-center text-center gap-4 border-y-2 border-gray p-6 my-10 mx-10 md:flex-row md:text-left md:border-y-0 md:gap-4 md:mx-6 md:p-0">
+          <ul className="flex flex-col justify-center text-center gap-4 border-y-2 border-gray p-6 my-10 mx-10 md:flex-row md:text-left md:border-y-0 md:gap-4 md:mx-6 md:p-0 lg:mx-36">
             <li className="md:border-y-2 md:pt-4 md:pr-10 md:w-full md:self-end">
               <h3 className="text-blue font-sans opacity-70">Team Members</h3>
               <p className="text-dark-pink font-serif text-750 font-bold opacity-100">
@@ -76,8 +76,8 @@ function About() {
             </li>
           </ul>
         </section>
-        <section className="flex flex-col text-center justify-center gap-16 mt-16 mx-8 mb-20 md:text-left md:gap-14">
-          <div className="flex flex-col gap-6 items-center md:flex-row md:gap-2">
+        <section className="flex flex-col text-center justify-center gap-16 mt-16 mx-8 mb-20 md:text-left md:gap-14 lg:mx-56 lg:mt-20">
+          <div className="flex flex-col gap-6 items-center md:flex-row md:gap-2 ">
             <h2 className="text-blue text-2xl font-bold items-center md: w-full md:text-3xl">
               The Culture
             </h2>
@@ -89,7 +89,7 @@ function About() {
               the job title.
             </p>
           </div>
-          <div className="flex flex-col gap-6 items-center md:flex-row md:gap-6">
+          <div className="flex flex-col gap-6 items-center md:flex-row md:gap-6 lg:gap-10">
             <h2 className="text-blue text-2xl font-bold md: w-1/2 md:text-3xl">
               The People
             </h2>

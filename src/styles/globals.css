@@ -70,6 +70,20 @@ body {
     background-position: right -239% top -27%;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .about-main {
+    background-size: auto;
+    background-position: right -17% top -41%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-main-secondary {
+    background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}
 
 .contact-main {
   background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);

@@ -12,7 +12,7 @@ function Pricing() {
         <h1 className="text-3xl text-center font-bold md:text-5xl md:pt-6 lg:text-left lg:mx-44 lg:text-750">
           Pricing
         </h1>
-        <div className="mb-24 md:flex md:flex-row md:justify-evenly md:gap-4 md:m-20 lg:justify-normal">
+        <div className="mb-24 md:flex md:flex-row md:justify-evenly md:gap-4 md:m-20 lg:justify-normal lg:mx-44">
           {" "}
           <div className="flex flex-col items-center gap-4 lg:items-baseline">
             <h2 className="text-2xl text-dark-pink p-14 font-bold md:p-0 lg:text-550">
@@ -23,7 +23,7 @@ function Pricing() {
               requests
             </p>
             <h3 className="text-6xl font-bold md:text-5xl md:py-2">$0.00</h3>
-            <ul className="flex flex-col gap-4 border-y-2 border-blue/25 p-6 px-24 md:px-12 lg:pl-0 lg:pr-64">
+            <ul className="flex flex-col gap-4 border-y-2 border-blue/25 p-6 px-24 md:px-12 lg:pl-0 lg:pr-56">
               <div className="flex  gap-4">
                 <TickIcon hidden={undefined} />
                 <li>Transactions</li>
@@ -66,7 +66,7 @@ function Pricing() {
               minimums
             </p>
             <h3 className="text-6xl font-bold md:text-5xl md:py-2">$249.00</h3>
-            <ul className="flex flex-col gap-4 border-y-2 border-blue/25 p-6 px-24 md:px-12 lg:pl-0 lg:pr-64">
+            <ul className="flex flex-col gap-4 border-y-2 border-blue/25 p-6 px-24 md:px-12 lg:pl-0 lg:pr-56">
               <div className="flex  gap-4">
                 <TickIcon hidden={undefined} />
                 <li>Transactions</li>
@@ -111,7 +111,7 @@ function Pricing() {
             <h3 className="text-6xl text-blue font-bold md:text-5xl md:py-2">
               $499.00
             </h3>
-            <ul className="flex flex-col gap-4 border-y-2 border-blue/25 p-6 px-24 md:px-12 lg:pl-0 lg:pr-64">
+            <ul className="flex flex-col gap-4 border-y-2 border-blue/25 p-6 px-24 md:px-12 lg:pl-0 lg:pr-56">
               <div className="flex  gap-4">
                 <TickIcon hidden={undefined} />
                 <li>Transactions</li>
