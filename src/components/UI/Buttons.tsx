@@ -13,7 +13,7 @@ function PrimaryButton(props) {
 function SecondaryButton(props) {
   return (
     <button
-      className={`${props.className} capitalize font-bold border px-10 py-4 rounded-full hover:bg-blue`}
+      className={`${props.className} capitalize font-bold border px-10 py-4 rounded-full hover:bg-blue lg:px-14`}
       onClick={props.onClick}
       type={props.type || "button"}
     >

@@ -47,20 +47,23 @@ function Contact() {
     <div className="contact-main">
       <NavBar />
       <main>
-        <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6 md:text-5xl md:mx-44 md:mt-10">
+        <h1 className="text-4xl text-center text-blue font-bold leading-9 mx-6 md:text-5xl md:mx-44 md:mt-10 lg:text-left lg:w-2/5">
           Submit a help request and we’ll get in touch shortly.
         </h1>
-        <ContactForm addContact={addContact} />
-        <section className="grid justify-items-center gap-8 text-center px-10 py-14 md:pt-0 md:mb-10">
-          <h2 className="text-blue text-2xl font-bold md:mx-40">
-            Join the thousands of innovators already building with us
-          </h2>
-          <div className="grid grid-cols-2 gap-14 md:grid-cols-3">
-            {companyLogos.map((logo: any, index: number) => {
-              return <Image key={index} src={logo.src} alt={logo.alt} />;
-            })}
-          </div>
-        </section>
+        <div className="lg:flex">
+          {" "}
+          <ContactForm addContact={addContact} />
+          <section className="grid justify-items-center gap-8 text-center px-10 py-14 md:pt-0 md:mb-10 lg:place-content-center">
+            <h2 className="text-blue text-2xl font-bold md:mx-40 lg:mx-0 lg:text-left lg:mr-48">
+              Join the thousands of innovators already building with us
+            </h2>
+            <div className="grid grid-cols-2 gap-14 md:grid-cols-3 lg:gap-10 lg:justify-items-center lg:mr-auto">
+              {companyLogos.map((logo: any, index: number) => {
+                return <Image key={index} src={logo.src} alt={logo.alt} />;
+              })}
+            </div>
+          </section>
+        </div>
         <CallToAction />
       </main>
       <Footer />

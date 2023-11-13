@@ -25,7 +25,7 @@ function ContactForm({ addContact }) {
   return (
     <>
       <form
-        className="flex flex-col gap-4 text-blue mx-6 my-14 md:mx-44"
+        className="flex flex-col gap-4 text-blue mx-6 my-14 md:mx-44 lg:mr-10"
         onSubmit={handleSubmit}
       >
         <div className="flex justify-between border-b-2 border-blue border-opacity-30 p-5">
@@ -34,7 +34,7 @@ function ContactForm({ addContact }) {
             Name
           </label>
           <input
-            className="bg-transparent"
+            className="bg-transparent text-right"
             type="text"
             id="name"
             name="name"
@@ -50,7 +50,7 @@ function ContactForm({ addContact }) {
             Email Address
           </label>
           <input
-            className="bg-transparent"
+            className="bg-transparent text-right"
             type="text"
             id="email"
             name="email"
@@ -66,7 +66,7 @@ function ContactForm({ addContact }) {
             Company Name
           </label>
           <input
-            className="bg-transparent w-7/12"
+            className="bg-transparent w-7/12 text-right"
             type="text"
             id="company"
             name="company"
@@ -82,7 +82,7 @@ function ContactForm({ addContact }) {
             Title
           </label>
           <input
-            className="bg-transparent"
+            className="bg-transparent text-right"
             type="text"
             id="title"
             name="title"
@@ -104,7 +104,7 @@ function ContactForm({ addContact }) {
             type="checkbox"
             id="subscribe"
             name="subscribe"
-            className="bg-transparent"
+            className="bg-transparent text-right"
             onChange={handleChange}
           />
           <label className="flex" htmlFor="subscribe">
