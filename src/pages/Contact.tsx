@@ -12,6 +12,7 @@ import MicrosoftImage from "../assets/shared/desktop/microsoft-dark.svg";
 import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
 import { useState } from "react";
+import { FormDataProps } from "@/models";
 
 function Contact() {
   const companyLogos: any = [
@@ -35,7 +36,7 @@ function Contact() {
     },
   ]);
 
-  function addContact(contact) {
+  function addContact(contact:  FormDataProps ) {
     setContactDetails((currContacts) => {
       return [...currContacts, { ...contact }];
     });

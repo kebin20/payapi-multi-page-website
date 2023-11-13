@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { SecondaryButton } from "../UI/Buttons";
+import { ContactFormProps } from "@/models";
+import { v4 as uuidv4 } from "uuid";
 
-function ContactForm({ addContact }) {
+function ContactForm({ addContact }: ContactFormProps) {
   const [formData, setFormData] = useState({
+    id: uuidv4(),
     name: "",
     email: "",
     company: "",
@@ -17,7 +20,7 @@ function ContactForm({ addContact }) {
     });
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault();
     addContact(formData);
   }
