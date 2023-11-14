@@ -23,7 +23,7 @@ function FullReviewDetails(props: ReviewInterface) {
 
 export async function getStaticPaths() {
   const client = await MongoClient.connect(
-    "mongodb+srv://generaluser:1234@cluster0.ulhesxn.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://generaluser:1234@cluster0.ulhesxn.mongodb.net/?retryWrites=true&w=majority&ssl=true"
   );
   const db = client.db();
 
@@ -52,7 +52,7 @@ export async function getStaticProps(context: {
   const reviewId = context.params.reviewId;
 
   const client = await MongoClient.connect(
-    "mongodb+srv://generaluser:1234@cluster0.ulhesxn.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://generaluser:1234@cluster0.ulhesxn.mongodb.net/?retryWrites=true&w=majority&ssl=true"
   );
   const db = client.db();
 
