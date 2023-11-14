@@ -1,8 +1,9 @@
 import { MongoClient } from "mongodb";
 
 import ReviewList from "../components/reviews/ReviewList";
+import { ReviewDataProps } from "@/models";
 
-function Reviews(props) {
+function Reviews(props: { reviews: ReviewDataProps[]; }) {
   return (
     <>
       <h1>Testimonials</h1>

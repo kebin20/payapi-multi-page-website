@@ -1,5 +1,10 @@
+import { MouseEventHandler, ReactNode } from "react";
+
+export interface ReviewInterface {
+  reviewData: ReviewDataProps;
+}
+
 export interface ReviewDataProps {
-  string: any;
   id?: string;
   title?: string;
   name?: string;
@@ -19,4 +24,11 @@ export interface FormDataProps {
 
 export interface ContactFormProps {
   addContact: (contact: FormDataProps) => void;
+}
+
+export interface ButtonProps {
+  className?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  children: ReactNode;
+  type?: "button" | "submit" | "reset";
 }

@@ -1,11 +1,11 @@
-import ReviewData from "../../models";
+import { ReviewDataProps } from "../../models";
 
 export default function FullReviewDetail({
   title,
   name,
   date,
   comment,
-}: ReviewData) {
+}: ReviewDataProps) {
   return (
     <>
       <h1>{title}</h1>

@@ -2,11 +2,12 @@ import { useRouter } from "next/router";
 
 import NewReviewForm from "@/components/reviews/NewReviewForm";
 import Head from "next/head";
+import { ReviewDataProps } from "@/models";
 
 function NewReviewPage() {
   const router = useRouter();
 
-  async function addReviewHandler(enteredReviewData) {
+  async function addReviewHandler(enteredReviewData: ReviewDataProps) {
     const response = await fetch("/api/new-review", {
       method: "POST",
       body: JSON.stringify(enteredReviewData),

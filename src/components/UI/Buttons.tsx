@@ -1,4 +1,6 @@
-function PrimaryButton(props) {
+import { ButtonProps } from "@/models";
+
+function PrimaryButton(props: ButtonProps) {
   return (
     <button
       className={`${props.className} font-bold bg-dark-pink hover:bg-light-pink px-14 py-3.5 rounded-full `}
@@ -10,7 +12,7 @@ function PrimaryButton(props) {
   );
 }
 
-function SecondaryButton(props) {
+function SecondaryButton(props: ButtonProps) {
   return (
     <button
       className={`${props.className} capitalize font-bold border px-10 py-4 rounded-full hover:bg-blue lg:px-14`}

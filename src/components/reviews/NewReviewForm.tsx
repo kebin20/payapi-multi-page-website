@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import ReviewData from "../../models";
+import { ReviewDataProps } from "../../models";
 
 function NewReviewForm({
   onAddReview,
 }: {
-  onAddReview: (reviewData: ReviewData) => void;
+  onAddReview: (reviewData: ReviewDataProps) => void;
 }) {
   const titleInputRef = useRef<HTMLInputElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
@@ -19,13 +19,12 @@ function NewReviewForm({
     const enteredDate = dateInputRef.current?.value;
     const enteredComment = commentInputRef.current?.value;
 
-    const reviewData = {
+    const reviewData: ReviewDataProps = {
       title: enteredTitle,
       name: enteredName,
       date: enteredDate,
       comment: enteredComment,
     };
-
     onAddReview(reviewData);
   }
 

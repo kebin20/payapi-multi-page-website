@@ -1,10 +1,10 @@
-import ReviewData from "@/models";
+import {ReviewDataProps} from "@/models";
 import ReviewItem from "./ReviewItem";
 
-function ReviewList({ reviews }: { reviews: ReviewData }) {
+function ReviewList({ reviews }: { reviews: ReviewDataProps[] }) {
   return (
     <ul>
-      {reviews.map((review: ReviewData) => (
+      {reviews.map((review: ReviewDataProps) => (
         <ReviewItem
           key={review.id}
           id={review.id}
