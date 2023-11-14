@@ -52,7 +52,7 @@ export async function getStaticProps(context: {
   const reviewId = context.params.reviewId;
 
   const client = await MongoClient.connect(
-    "mongodb+srv://ktanzyl:1234@reviewdata.dqz2kqn.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://ktanzyl:1234@reviewdata.dqz2kqn.mongodb.net/?retryWrites=true&w=majority&ssl=true"
   );
   const db = client.db();
 

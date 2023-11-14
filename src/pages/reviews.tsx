@@ -17,7 +17,7 @@ export default Reviews;
 export async function getStaticProps() {
   // fetch data from an API
   const client = await MongoClient.connect(
-    "mongodb+srv://ktanzyl:1234@reviewdata.dqz2kqn.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://ktanzyl:1234@reviewdata.dqz2kqn.mongodb.net/?retryWrites=true&w=majority&ssl=true"
   );
   const db = client.db();
 
