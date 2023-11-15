@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SecondaryButton } from "../UI/Buttons";
-import { ContactFormProps } from "@/models";
+import { ContactFormProps, FormDataProps } from "@/models";
 import { v4 as uuidv4 } from "uuid";
 
 function ContactForm({ addContact }: ContactFormProps) {
@@ -14,15 +14,53 @@ function ContactForm({ addContact }: ContactFormProps) {
     subscribe: true,
   });
 
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    company: "",
+    title: "",
+    message: "",
+  });
+
   function handleChange(event: { target: { name: any; value: any } }) {
+    //Destructured name and value from event.target
+    const { name, value } = event.target;
+
+    let error = "";
+
+    if (name === "email" && !/\S+@\S+\.\S+/.test(value)) {
+      error = "Please use a valid email address";
+    } else if (
+      name !== "email" &&
+      typeof value === "string" &&
+      value.trim() === ""
+    ) {
+      error = "This field can't be empty";
+    }
     setFormData((currData) => {
-      return { ...currData, [event.target.name]: event.target.value };
+      return { ...currData, [name]: value };
+    });
+    setErrors((prevErrors) => {
+      return { ...prevErrors, [name]: error };
     });
   }
 
   function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault();
-    addContact(formData);
+
+    //Check for errors before submitting
+    for (const key in formData) {
+      if (formData.hasOwnProperty(key)) {
+        handleChange({
+          target: { name: key, value: formData[key as keyof FormDataProps] },
+        });
+      }
+    }
+
+    //If there are no errors, submit the form
+    if (Object.values(errors).every((error) => !error)) {
+      addContact(formData);
+    }
   }
 
   return (
@@ -45,25 +83,27 @@ function ContactForm({ addContact }: ContactFormProps) {
             onChange={handleChange}
             value={formData.name}
           />
+          {errors.name && <p className="text-red-500">{errors.name}</p>}
         </div>
 
-        <div className="flex justify-between  border-b-2 border-blue border-opacity-30 p-5">
+        <div className="flex justify-between gap-4  border-b-2 border-blue border-opacity-30 p-5">
           {" "}
           <label htmlFor="email" className="opacity-50">
             Email Address
           </label>
           <input
             className="bg-transparent text-right"
-            type="text"
+            type="email"
             id="email"
             name="email"
             placeholder="john@email.com"
             onChange={handleChange}
             value={formData.email}
           />
+          {errors.email && <p className="text-red-500">{errors.email}</p>}
         </div>
 
-        <div className="flex justify-between  border-b-2 border-blue border-opacity-30 p-5">
+        <div className="flex justify-between gap-4  border-b-2 border-blue border-opacity-30 p-5">
           {" "}
           <label htmlFor="company" className="opacity-50">
             Company Name
@@ -73,13 +113,14 @@ function ContactForm({ addContact }: ContactFormProps) {
             type="text"
             id="company"
             name="company"
-            placeholder="Company limited"
+            placeholder="ABC Ltd"
             onChange={handleChange}
             value={formData.company}
           />
+          {errors.company && <p className="text-red-500">{errors.company}</p>}
         </div>
 
-        <div className="flex justify-between  border-b-2 border-blue border-opacity-30 p-5">
+        <div className="flex justify-between gap-4  border-b-2 border-blue border-opacity-30 p-5">
           {" "}
           <label htmlFor="title" className="opacity-50">
             Title
@@ -92,16 +133,18 @@ function ContactForm({ addContact }: ContactFormProps) {
             onChange={handleChange}
             value={formData.title}
           />
+          {errors.title && <p className="text-red-500">{errors.title}</p>}
         </div>
 
-        <div className="flex justify-between border-b-2 border-blue border-opacity-30 p-5">
+        <div className="flex justify-between gap-4 border-b-2 border-blue border-opacity-30 p-5">
           {" "}
           <label htmlFor="message" className="opacity-50">
             Message
           </label>
           <textarea className="bg-transparent" id="message" name="message" />
+          {errors.message && <p className="text-red-500">{errors.message}</p>}
         </div>
-
+        <p className="text-xs">All fields are required</p>
         <div className="flex gap-6 opacity-100 my-4">
           <input
             type="checkbox"
