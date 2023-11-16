@@ -23,7 +23,7 @@ export interface FormDataProps {
 }
 
 export interface ContactFormProps {
-  addContact: (contact: FormDataProps) => void;
+  addContactHandler: (contact: FormDataProps) => void;
 }
 
 export interface ButtonProps {

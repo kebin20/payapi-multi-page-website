@@ -3,7 +3,7 @@ import { SecondaryButton } from "../UI/Buttons";
 import { ContactFormProps, FormDataProps } from "@/models";
 import { v4 as uuidv4 } from "uuid";
 
-function ContactForm({ addContact }: ContactFormProps) {
+function ContactForm({ addContactHandler }: ContactFormProps) {
   const [formData, setFormData] = useState({
     id: uuidv4(),
     name: "",
@@ -59,7 +59,7 @@ function ContactForm({ addContact }: ContactFormProps) {
 
     //If there are no errors, submit the form
     if (Object.values(errors).every((error) => !error)) {
-      addContact(formData);
+      addContactHandler(formData);
     }
   }
 
@@ -141,7 +141,13 @@ function ContactForm({ addContact }: ContactFormProps) {
           <label htmlFor="message" className="opacity-50">
             Message
           </label>
-          <textarea className="bg-transparent" id="message" name="message" />
+          <textarea
+            className="bg-transparent"
+            id="message"
+            name="message"
+            onChange={handleChange}
+            value={formData.message}
+          />
           {errors.message && <p className="text-red-500">{errors.message}</p>}
         </div>
         <p className="text-xs p-4">All fields are required</p>
