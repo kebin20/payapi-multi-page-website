@@ -46,6 +46,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Tailwind](https://tailwind.com/) - For styling
+- [MongoDB Atlas](https://www.mongodb.com/atlas) - For storing contact and review data
 
 ### What I learned
 
