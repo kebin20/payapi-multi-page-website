@@ -16,8 +16,6 @@ async function handler(req, res) {
 
     const result = await reviewsCollection.insertOne(data);
 
-    console.log(result);
-
     client.close();
 
     res.status(201).json({ message: "Review inserted" });
