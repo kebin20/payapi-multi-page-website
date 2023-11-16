@@ -13,6 +13,7 @@ import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
 import { useState } from "react";
 import { FormDataProps } from "@/models";
+import router from "next/router";
 
 function Contact() {
   const companyLogos: any = [
@@ -24,25 +25,29 @@ function Contact() {
     { src: NvidiaImage, alt: "Nvidia logo" },
   ];
 
-  const [contactDetails, setContactDetails] = useState([
-    {
-      id: "",
-      name: "",
-      email: "",
-      company: "",
-      title: "",
-      message: "",
-      subscribe: true,
-    },
-  ]);
+  async function addContactHandler(contactDetails: FormDataProps) {
+    try {
+      console.log("Contact Details:", contactDetails);
 
-  function addContact(contact: FormDataProps) {
-    setContactDetails((currContacts) => {
-      return [...currContacts, { ...contact }];
-    });
+      const response = await fetch("/api/new-contact", {
+        method: "POST",
+        body: JSON.stringify(contactDetails),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit contact form");
+      }
+
+      const data = await response.json();
+
+      router.push("/");
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+    }
   }
-
-  console.log(contactDetails);
 
   return (
     <div className="contact-main">
@@ -53,7 +58,7 @@ function Contact() {
         </h1>
         <div className="lg:flex">
           {" "}
-          <ContactForm addContact={addContact} />
+          <ContactForm addContactHandler={addContactHandler} />
           <section className="grid justify-items-center gap-8 text-center px-10 py-14 md:pt-0 md:mb-10 lg:place-content-center">
             <h2 className="text-blue text-2xl font-bold md:mx-40 lg:mx-0 lg:text-left lg:mr-48">
               Join the thousands of innovators already building with us
