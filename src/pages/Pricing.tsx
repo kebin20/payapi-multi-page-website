@@ -12,7 +12,7 @@ function Pricing() {
         <h1 className="text-3xl text-center font-bold md:text-5xl md:pt-6 lg:text-left lg:mx-44 lg:text-750">
           Pricing
         </h1>
-        <div className="mb-24 md:flex md:flex-row md:justify-evenly md:gap-4 md:m-20 lg:justify-normal lg:mx-44">
+        <div className="mb-24 md:flex md:flex-row md:justify-evenly md:gap-4 md:m-20 lg:justify-normal lg:mx-44 xl:gap-28">
           {" "}
           <div className="flex flex-col items-center gap-4 lg:items-baseline">
             <h2 className="text-2xl text-dark-pink p-14 font-bold md:p-0 lg:text-550">

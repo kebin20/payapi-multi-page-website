@@ -144,7 +144,7 @@ function ContactForm({ addContact }: ContactFormProps) {
           <textarea className="bg-transparent" id="message" name="message" />
           {errors.message && <p className="text-red-500">{errors.message}</p>}
         </div>
-        <p className="text-xs">All fields are required</p>
+        <p className="text-xs p-4">All fields are required</p>
         <div className="flex gap-6 opacity-100 my-4">
           <input
             type="checkbox"

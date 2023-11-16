@@ -36,7 +36,7 @@ function Contact() {
     },
   ]);
 
-  function addContact(contact:  FormDataProps ) {
+  function addContact(contact: FormDataProps) {
     setContactDetails((currContacts) => {
       return [...currContacts, { ...contact }];
     });

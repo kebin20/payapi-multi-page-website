@@ -47,7 +47,7 @@ export default function Home() {
           <Image
             alt="build your apis for free"
             src={PhoneMockup}
-            className="w-1/2 ml-4 md:w-2/5 md:ml-14 lg:w-4/5 lg:ml-auto order-first lg:order-last"
+            className="w-1/2 ml-4 md:w-2/5 md:ml-14 lg:w-4/5 lg:ml-auto order-first lg:order-last xl:w-3/5"
           />
           <div className="flex flex-col gap-6 md:px-14 lg:p-0 lg:justify-center lg:gap-8">
             {" "}
@@ -96,7 +96,7 @@ export default function Home() {
           </div>
         </section>
         <div className="bg-pattern-circle-feature ">
-          <section className="md:mx-20">
+          <section className="md:mx-20 xl:mx-24">
             <div className="my-20 mx-6 flex flex-col gap-4 items-center text-center lg:flex-row lg:justify-center">
               <Image
                 src={EasyMockup}
@@ -122,7 +122,7 @@ export default function Home() {
                 alt="easy to implement UI"
                 className="max-w-[435px] ml-9 md:max-w-md order-first lg:order-last lg:max-w-screen-sm"
               />
-              <div className="flex flex-col gap-6 lg:text-left lg:pl-14 lg:ml-10 lg:leading-7">
+              <div className="flex flex-col gap-6 lg:text-left lg:pl-14 lg:ml-10 lg:leading-7 xl:pl-0 xl:ml-0">
                 <h2 className="text-blue text-4xl font-bold md:text-700 lg:text-5xl">
                   Simple UI & UX
                 </h2>

@@ -11,13 +11,13 @@ function About() {
     <div className="about-main">
       <NavBar />
       <main>
-        <section className="flex flex-col gap-14 text-center mt-16 mx-8 mb-20 md:text-left lg:mt-10 lg:mx-60 ">
+        <section className="flex flex-col gap-14 text-center mt-16 mx-8 mb-20 md:text-left lg:mt-10 lg:mx-60 xl:gap-28">
           <h1 className="text-4xl text-center tracking-tight text-blue font-bold leading-9 md:text-5xl md:mx-28 lg:text-750 lg:text-left lg:mx-0 lg:pr-[23rem]">
             We empower innovators by delivering access to the financial system
           </h1>
           <div className="flex flex-col gap-6 md:flex-row ">
             {" "}
-            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-full">
+            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-full xl:w-1/4">
               Our Vision
             </h2>
             <p>
@@ -29,7 +29,7 @@ function About() {
             </p>
           </div>
           <div className="flex flex-col gap-6 md:flex-row">
-            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-10/12">
+            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-10/12 xl:w-1/5">
               Our Business
             </h2>
             <p>
@@ -78,7 +78,7 @@ function About() {
         </section>
         <section className="flex flex-col text-center justify-center gap-16 mt-16 mx-8 mb-20 md:text-left md:gap-14 lg:mx-56 lg:mt-20">
           <div className="flex flex-col gap-6 items-center md:flex-row md:gap-2 ">
-            <h2 className="text-blue text-2xl font-bold items-center md: w-full md:text-3xl">
+            <h2 className="text-blue text-2xl font-bold items-center md: w-full md:text-3xl xl:w-1/6">
               The Culture
             </h2>
             <p>
@@ -90,7 +90,7 @@ function About() {
             </p>
           </div>
           <div className="flex flex-col gap-6 items-center md:flex-row md:gap-6 lg:gap-10">
-            <h2 className="text-blue text-2xl font-bold md: w-1/2 md:text-3xl">
+            <h2 className="text-blue text-2xl font-bold md: w-1/2 md:text-3xl xl:w-auto xl:mr-12">
               The People
             </h2>
             <p>
