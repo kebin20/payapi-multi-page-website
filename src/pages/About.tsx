@@ -17,10 +17,10 @@ function About() {
           </h1>
           <div className="flex flex-col gap-6 md:flex-row ">
             {" "}
-            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-full">
+            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-full lg:w-1/3">
               Our Vision
             </h2>
-            <p>
+            <p className="lg:mr-24">
               Our main goal is to build beautiful consumer experiences along
               with developer-friendly infrastructure. The result is an
               intelligent tool that gives everyone the ability to create amazing
@@ -29,7 +29,7 @@ function About() {
             </p>
           </div>
           <div className="flex flex-col gap-6 md:flex-row">
-            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-10/12">
+            <h2 className="text-blue text-2xl font-bold md:text-3xl md:w-10/12 lg:w-1/4">
               Our Business
             </h2>
             <p>
@@ -77,8 +77,8 @@ function About() {
           </ul>
         </section>
         <section className="flex flex-col text-center justify-center gap-16 mt-16 mx-8 mb-20 md:text-left md:gap-14 lg:mx-56 lg:mt-20">
-          <div className="flex flex-col gap-6 items-center md:flex-row md:gap-6 ">
-            <h2 className="text-blue text-2xl font-bold items-center md:w-full md:text-3xl">
+          <div className="flex flex-col gap-6 items-center md:flex-row md:gap-6 xl:gap-14 ">
+            <h2 className="text-blue text-2xl font-bold items-center md:text-3xl">
               The Culture
             </h2>
             <p>
@@ -90,7 +90,7 @@ function About() {
             </p>
           </div>
           <div className="flex flex-col gap-6 items-center md:flex-row md:gap-6 lg:gap-10">
-            <h2 className="text-blue text-2xl font-bold md: w-1/2 md:text-3xl">
+            <h2 className="text-blue text-2xl font-bold md:text-3xl">
               The People
             </h2>
             <p>
