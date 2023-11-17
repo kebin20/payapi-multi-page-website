@@ -13,7 +13,7 @@ export default function NavBar() {
     setToggle((prevToggle) => !prevToggle);
   }
 
-  const navItems = ["Pricing", "About", "Contact"];
+  const navItems = ["pricing", "about", "contact"];
 
   return (
     <header
