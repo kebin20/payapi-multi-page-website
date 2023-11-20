@@ -7,7 +7,7 @@ import LinkedInLogo from "../../assets/shared/desktop/linkedin.svg";
 import NavigationItem from "./NavigationItem";
 
 function Footer() {
-  const navItems = ["pricing", "about", "contact"];
+  const navItems = ["Pricing", "About", "Contact"];
 
   return (
     <footer className="bg-dark-blue flex flex-col items-center bg-pattern-circle-footer md:flex-row md:justify-around lg:gap-72">
@@ -26,7 +26,7 @@ function Footer() {
               href={`/${item}`}
               className="md:text-white"
             >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
+              {item}
             </NavigationItem>
           ))}
         </ul>
