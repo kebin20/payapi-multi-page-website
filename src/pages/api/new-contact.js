@@ -14,6 +14,8 @@ async function handler(req, res) {
 
       const result = await contactsCollection.insertOne(formData);
 
+      console.group(result);
+
       client.close();
 
       res.status(201).json({ message: "Contact form data inserted" });

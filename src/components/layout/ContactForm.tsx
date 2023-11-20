@@ -4,6 +4,16 @@ import { ContactFormProps, FormDataProps } from "@/models";
 import { v4 as uuidv4 } from "uuid";
 
 function ContactForm({ addContactHandler }: ContactFormProps) {
+  const initialFormData = {
+    id: uuidv4(),
+    name: "",
+    email: "",
+    company: "",
+    title: "",
+    message: "",
+    subscribe: true,
+  };
+
   const [formData, setFormData] = useState({
     id: uuidv4(),
     name: "",
@@ -21,6 +31,8 @@ function ContactForm({ addContactHandler }: ContactFormProps) {
     title: "",
     message: "",
   });
+
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   function handleChange(event: { target: { name: any; value: any } }) {
     //Destructured name and value from event.target
@@ -60,11 +72,14 @@ function ContactForm({ addContactHandler }: ContactFormProps) {
     //If there are no errors, submit the form
     if (Object.values(errors).every((error) => !error)) {
       addContactHandler(formData);
+      setSubmitSuccess(true);
+      setFormData(initialFormData);
     }
   }
 
   return (
     <>
+      {submitSuccess && alert("Form submitted successfully!")}
       <form
         className="flex flex-col gap-4 text-blue mx-6 my-14 md:mx-44 lg:mr-10"
         onSubmit={handleSubmit}
@@ -82,6 +97,7 @@ function ContactForm({ addContactHandler }: ContactFormProps) {
             placeholder="John Smith"
             onChange={handleChange}
             value={formData.name}
+            required
           />
           {errors.name && <p className="text-red-500">{errors.name}</p>}
         </div>
@@ -99,6 +115,7 @@ function ContactForm({ addContactHandler }: ContactFormProps) {
             placeholder="john@email.com"
             onChange={handleChange}
             value={formData.email}
+            required
           />
           {errors.email && <p className="text-red-500">{errors.email}</p>}
         </div>
@@ -116,6 +133,7 @@ function ContactForm({ addContactHandler }: ContactFormProps) {
             placeholder="ABC Ltd"
             onChange={handleChange}
             value={formData.company}
+            required
           />
           {errors.company && <p className="text-red-500">{errors.company}</p>}
         </div>
@@ -132,6 +150,7 @@ function ContactForm({ addContactHandler }: ContactFormProps) {
             name="title"
             onChange={handleChange}
             value={formData.title}
+            required
           />
           {errors.title && <p className="text-red-500">{errors.title}</p>}
         </div>
@@ -147,6 +166,7 @@ function ContactForm({ addContactHandler }: ContactFormProps) {
             name="message"
             onChange={handleChange}
             value={formData.message}
+            required
           />
           {errors.message && <p className="text-red-500">{errors.message}</p>}
         </div>
