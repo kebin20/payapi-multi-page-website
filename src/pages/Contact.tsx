@@ -11,9 +11,7 @@ import GoogleImage from "../assets/shared/desktop/google-dark.svg";
 import MicrosoftImage from "../assets/shared/desktop/microsoft-dark.svg";
 import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
-import { useState } from "react";
 import { FormDataProps } from "@/models";
-import router from "next/router";
 
 function Contact() {
   const companyLogos: any = [
@@ -40,12 +38,8 @@ function Contact() {
       if (!response.ok) {
         throw new Error("Failed to submit contact form");
       }
-
-      const data = await response.json();
-
-      router.push("/");
     } catch (error) {
-      console.error("Error submitting contact form:", error);
+      alert("Error submitting contact form");
     }
   }
 
