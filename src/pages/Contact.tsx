@@ -12,7 +12,7 @@ import MicrosoftImage from "../assets/shared/desktop/microsoft-dark.svg";
 import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
 
-function Contact() {
+export default function contact() {
   const companyLogos: any = [
     { src: TeslaImage, alt: "Tesla Logo" },
     { src: MicrosoftImage, alt: "Microsoft logo" },
@@ -49,5 +49,3 @@ function Contact() {
     </div>
   );
 }
-
-export default Contact;

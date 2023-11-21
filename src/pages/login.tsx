@@ -1,7 +1,7 @@
 import Footer from "@/components/layout/Footer";
 import NavBar from "@/components/layout/Navbar";
 
-export default function Login() {
+export default function login() {
   return (
     <>
       <NavBar />

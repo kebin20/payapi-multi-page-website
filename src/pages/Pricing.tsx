@@ -4,7 +4,7 @@ import { SecondaryButton } from "@/components/UI/Buttons";
 import CallToAction from "@/components/layout/CallToAction";
 import TickIcon from "@/components/UI/TickIcon";
 
-function Pricing() {
+export default function pricing() {
   return (
     <div className="pricing-main">
       <NavBar />
@@ -152,5 +152,3 @@ function Pricing() {
     </div>
   );
 }
-
-export default Pricing;

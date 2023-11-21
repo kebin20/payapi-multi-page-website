@@ -6,7 +6,7 @@ import Image from "next/image";
 import TeamMembersImage from "@/assets/about/mobile/image-team-members.jpg";
 import TeamMembersDesktopImage from "@/assets/about/desktop/image-team-members.jpg";
 
-function About() {
+export default function about() {
   return (
     <div className="about-main">
       <NavBar />
@@ -106,5 +106,3 @@ function About() {
     </div>
   );
 }
-
-export default About;
