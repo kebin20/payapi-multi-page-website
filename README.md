@@ -1,4 +1,4 @@
-![homepage](./public/preview.jpg)
+![homepage](./public/screenshot.jpg)
 
 # PayAPI Multi Page Website
 
