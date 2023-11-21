@@ -113,6 +113,11 @@ One of the interesting thing I learnt while doing the form validation was, rathe
   }
 ```
 
+I found a nifty way for the page to redirect to a certain page by utilizing the code below:
+
+```js
+router.push("/");
+```
 NOTE: getStaticProps(); normally in React, initial data is not fetched until the next render cycle (client-side data fetching after a page is fully rendered), therefore, the initial page will load with no data until the next render cycle, which is not good for SEO. However, with getStaticProps(), the data will initially render during the build phase, so that when the initial page is rendered, the data will also be rendered too. Hence, eliminating the need of using useEffect() in the component. 
 
 ### Continued development
