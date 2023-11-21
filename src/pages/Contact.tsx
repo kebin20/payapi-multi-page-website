@@ -22,26 +22,6 @@ function Contact() {
     { src: NvidiaImage, alt: "Nvidia logo" },
   ];
 
-  // async function addContactHandler(contactDetails: FormDataProps) {
-  //   try {
-  //     console.log("Contact Details:", contactDetails);
-
-  //     const response = await fetch("/api/new-contact", {
-  //       method: "POST",
-  //       body: JSON.stringify(contactDetails),
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error("Failed to submit contact form");
-  //     }
-  //   } catch (error) {
-  //     alert("Error submitting contact form");
-  //   }
-  // }
-
   return (
     <div className="contact-main">
       <NavBar />
