@@ -3,7 +3,7 @@ import { SecondaryButton } from "../UI/Buttons";
 import { ContactFormProps, FormDataProps } from "@/models";
 import { v4 as uuidv4 } from "uuid";
 
-function ContactForm({ addContactHandler }: ContactFormProps) {
+function ContactForm() {
   const initialFormData = {
     id: uuidv4(),
     name: "",
@@ -33,6 +33,26 @@ function ContactForm({ addContactHandler }: ContactFormProps) {
   });
 
   const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  async function addContactHandler(contactDetails: FormDataProps) {
+    try {
+      console.log("Contact Details:", contactDetails);
+
+      const response = await fetch("/api/new-contact", {
+        method: "POST",
+        body: JSON.stringify(contactDetails),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit contact form");
+      }
+    } catch (error) {
+      alert("Error submitting contact form");
+    }
+  }
 
   function handleChange(event: { target: { name: any; value: any } }) {
     //Destructured name and value from event.target

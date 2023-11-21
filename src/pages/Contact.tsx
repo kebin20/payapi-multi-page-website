@@ -11,7 +11,6 @@ import GoogleImage from "../assets/shared/desktop/google-dark.svg";
 import MicrosoftImage from "../assets/shared/desktop/microsoft-dark.svg";
 import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
-import { FormDataProps } from "@/models";
 
 function Contact() {
   const companyLogos: any = [
@@ -23,25 +22,25 @@ function Contact() {
     { src: NvidiaImage, alt: "Nvidia logo" },
   ];
 
-  async function addContactHandler(contactDetails: FormDataProps) {
-    try {
-      console.log("Contact Details:", contactDetails);
+  // async function addContactHandler(contactDetails: FormDataProps) {
+  //   try {
+  //     console.log("Contact Details:", contactDetails);
 
-      const response = await fetch("/api/new-contact", {
-        method: "POST",
-        body: JSON.stringify(contactDetails),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+  //     const response = await fetch("/api/new-contact", {
+  //       method: "POST",
+  //       body: JSON.stringify(contactDetails),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     });
 
-      if (!response.ok) {
-        throw new Error("Failed to submit contact form");
-      }
-    } catch (error) {
-      alert("Error submitting contact form");
-    }
-  }
+  //     if (!response.ok) {
+  //       throw new Error("Failed to submit contact form");
+  //     }
+  //   } catch (error) {
+  //     alert("Error submitting contact form");
+  //   }
+  // }
 
   return (
     <div className="contact-main">
@@ -52,7 +51,7 @@ function Contact() {
         </h1>
         <div className="lg:flex">
           {" "}
-          <ContactForm addContactHandler={addContactHandler} />
+          <ContactForm />
           <section className="grid justify-items-center gap-8 text-center px-10 py-14 md:pt-0 md:mb-10 lg:place-content-center">
             <h2 className="text-blue text-2xl font-bold md:mx-40 lg:mx-0 lg:text-left lg:mr-48">
               Join the thousands of innovators already building with us
