@@ -13,7 +13,7 @@ export default function NavBar() {
     setToggle((prevToggle) => !prevToggle);
   }
 
-  const navItems = ["Pricing", "About", "Contact"];
+  const navItems = ["pricing", "about", "contact"];
 
   return (
     <header
@@ -37,7 +37,7 @@ export default function NavBar() {
               href={`/${item}`}
               className="md:text-blue"
             >
-              {item}
+              {item.charAt(0).toUpperCase() + item.slice(1)}
             </NavigationItem>
           ))}
         </ul>
