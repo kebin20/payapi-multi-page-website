@@ -47,6 +47,7 @@ Users should be able to:
 - [Next.js](https://nextjs.org/) - React framework
 - [Tailwind](https://tailwind.com/) - For styling
 - [MongoDB Atlas](https://www.mongodb.com/atlas) - For storing contact and review data
+- [Kinde](https://kinde.com/) - For authenticating admin login
 
 ### What I learned
 
@@ -113,7 +114,7 @@ One of the interesting thing I learnt while doing the form validation was, rathe
   }
 ```
 
-I found a nifty way for the page to redirect to a certain page by utilizing the code below:
+I discovered a way for the page to redirect to a certain page by utilizing the code below:
 
 ```js
 router.push("/");
