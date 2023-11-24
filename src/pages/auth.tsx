@@ -9,7 +9,7 @@ export default function Auth({ children }: { children: React.ReactNode }) {
   const { isLoading, isAuthenticated, user, getToken } = useKindeAuth();
 
   useEffect(() => {
-    if (!isLoading && !isAuthenticated && pathname != "/") {
+    if (!isLoading && !isAuthenticated && pathname !== "/") {
       return router.push("/");
     }
     if (!isLoading && isAuthenticated && pathname === "/") {
