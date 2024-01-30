@@ -119,7 +119,7 @@ function ContactForm() {
             value={formData.name}
             required
           />
-          {errors.name && <p className="text-red-500">{errors.name}</p>}
+          {errors.name && <small className="text-red-500">{errors.name}</small>}
         </div>
 
         <div className="flex justify-between gap-4  border-b-2 border-blue border-opacity-30 p-5">
@@ -137,7 +137,9 @@ function ContactForm() {
             value={formData.email}
             required
           />
-          {errors.email && <p className="text-red-500">{errors.email}</p>}
+          {errors.email && (
+            <small className="text-red-500">{errors.email}</small>
+          )}
         </div>
 
         <div className="flex justify-between gap-4  border-b-2 border-blue border-opacity-30 p-5">
@@ -155,7 +157,9 @@ function ContactForm() {
             value={formData.company}
             required
           />
-          {errors.company && <p className="text-red-500">{errors.company}</p>}
+          {errors.company && (
+            <small className="text-red-500">{errors.company}</small>
+          )}
         </div>
 
         <div className="flex justify-between gap-4  border-b-2 border-blue border-opacity-30 p-5">
@@ -172,7 +176,9 @@ function ContactForm() {
             value={formData.title}
             required
           />
-          {errors.title && <p className="text-red-500">{errors.title}</p>}
+          {errors.title && (
+            <small className="text-red-500">{errors.title}</small>
+          )}
         </div>
 
         <div className="flex justify-between gap-4 border-b-2 border-blue border-opacity-30 p-5">
@@ -188,7 +194,9 @@ function ContactForm() {
             value={formData.message}
             required
           />
-          {errors.message && <p className="text-red-500">{errors.message}</p>}
+          {errors.message && (
+            <small className="text-red-500">{errors.message}</small>
+          )}
         </div>
         <p className="text-xs p-4">All fields are required</p>
         <div className="flex gap-6 opacity-100 my-4">
