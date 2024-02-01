@@ -46,12 +46,12 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Tailwind](https://tailwind.com/) - For styling
-- [MongoDB Atlas](https://www.mongodb.com/atlas) - For storing contact and review data
-- [Kinde](https://kinde.com/) - For authenticating admin login
+- [MongoDB Atlas](https://www.mongodb.com/atlas) - For storing contact data
+- [React Hook Form](https://react-hook-form.com/) - For creating a quick form complete with validation
 
 ### What I learned
 
-One of the interesting thing I learnt while doing the form validation was, rather than manually adding an error message for each input field, dynamically outputting it using state was a much more efficient way of displaying the error messages. In addition, to make sure that no errors have occurred before submitting the form,  a for loop is used to loop over the keys in the formData object to make sure there are no errors, and if there are no errors, then the form can be safely submitted.
+1) One of the interesting thing I learnt while doing the form validation was, rather than manually adding an error message for each input field, dynamically outputting it using state was a much more efficient way of displaying the error messages. In addition, to make sure that no errors have occurred before submitting the form,  a for loop is used to loop over the keys in the formData object to make sure there are no errors, and if there are no errors, then the form can be safely submitted.
 
 ```js
   const [formData, setFormData] = useState({
@@ -114,7 +114,7 @@ One of the interesting thing I learnt while doing the form validation was, rathe
   }
 ```
 
-I discovered a way for the page to redirect to a certain page by utilizing the code below:
+2) I discovered a way for the page to redirect to a certain page by utilizing the code below:
 
 ```js
 router.push("/");
@@ -123,7 +123,7 @@ NOTE: getStaticProps(); normally in React, initial data is not fetched until the
 
 ### Continued development
 
-Will create a dashboard to display the registered user data from the contact form page, using MongoDB so that the app can become a CRUD app. Will implement a review system as well in the future.
+Will create a dashboard to display the registered user data from the contact form page using MongoDB so that the app will be a CRUD app. 
 
 
 ### Useful resources
