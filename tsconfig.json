@@ -33,7 +33,6 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/app/api/auth/[kindeAuth]/route.js",
     ".next/types/**/*.ts"
   ],
   "exclude": [
