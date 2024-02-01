@@ -11,7 +11,6 @@ import GoogleImage from "../assets/shared/desktop/google-dark.svg";
 import MicrosoftImage from "../assets/shared/desktop/microsoft-dark.svg";
 import OracleImage from "../assets/shared/desktop/oracle-dark.svg";
 import NvidiaImage from "../assets/shared/desktop/nvidia-dark.svg";
-import NewContactForm from "@/components/layout/NewContactForm";
 
 export default function contact() {
   const companyLogos: any = [
@@ -32,8 +31,7 @@ export default function contact() {
         </h1>
         <div className="lg:flex">
           {" "}
-          {/* <ContactForm /> */}
-          <NewContactForm />
+          <ContactForm />
           <section className="grid justify-items-center gap-8 text-center px-10 py-14 md:pt-0 md:mb-10 lg:place-content-center">
             <h2 className="text-blue text-2xl font-bold md:mx-40 lg:mx-0 lg:text-left lg:mr-48">
               Join the thousands of innovators already building with us

@@ -1,40 +1,42 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { SecondaryButton } from "../UI/Buttons";
-import { ContactFormProps, FormDataProps } from "@/models";
-import { v4 as uuidv4 } from "uuid";
 
-function ContactForm() {
-  const initialFormData = {
-    id: uuidv4(),
-    name: "",
-    email: "",
-    company: "",
-    title: "",
-    message: "",
-    subscribe: true,
+type FormValues = {
+  name: string;
+  email: string;
+  company: string;
+  title: string;
+  inquiry: string;
+};
+
+export default function ContactForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>({
+    mode: "onChange",
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      title: "",
+      inquiry: "",
+    },
+  });
+
+  const registerOptions = {
+    name: {
+      required: "Name required",
+      minLength: { value: 2, message: "Min length must be 2 characters" },
+    },
+    email: { required: "Email required" },
+    company: { required: "Company name required" },
+    title: { required: "Title required" },
+    inquiry: { required: "Please fill in your inquiry" },
   };
 
-  const [formData, setFormData] = useState({
-    id: uuidv4(),
-    name: "",
-    email: "",
-    company: "",
-    title: "",
-    message: "",
-    subscribe: true,
-  });
-
-  const [errors, setErrors] = useState({
-    name: "",
-    email: "",
-    company: "",
-    title: "",
-    message: "",
-  });
-
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  async function addContactHandler(contactDetails: FormDataProps) {
+  async function addContactHandler(contactDetails: FormValues) {
     try {
       console.log("Contact Details:", contactDetails);
 
@@ -54,55 +56,13 @@ function ContactForm() {
     }
   }
 
-  function handleChange(event: { target: { name: any; value: any } }) {
-    //Destructured name and value from event.target
-    const { name, value } = event.target;
-
-    let error = "";
-
-    if (name === "email" && !/\S+@\S+\.\S+/.test(value)) {
-      error = "Please use a valid email address";
-    } else if (
-      name !== "email" &&
-      typeof value === "string" &&
-      value.trim() === ""
-    ) {
-      error = "This field can't be empty";
-    }
-    setFormData((currData) => {
-      return { ...currData, [name]: value };
-    });
-    setErrors((prevErrors) => {
-      return { ...prevErrors, [name]: error };
-    });
-  }
-
-  function handleSubmit(e: { preventDefault: () => void }) {
-    e.preventDefault();
-
-    //Check for errors before submitting
-    for (const key in formData) {
-      if (formData.hasOwnProperty(key)) {
-        handleChange({
-          target: { name: key, value: formData[key as keyof FormDataProps] },
-        });
-      }
-    }
-
-    //If there are no errors, submit the form
-    if (Object.values(errors).every((error) => !error)) {
-      addContactHandler(formData);
-      setSubmitSuccess(true);
-      setFormData(initialFormData);
-    }
-  }
-
   return (
     <>
-      {submitSuccess && alert("Form submitted successfully!")}
       <form
         className="flex flex-col gap-4 text-blue mx-6 my-14 md:mx-44 lg:mr-10"
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit((data) => {
+          addContactHandler(data);
+        })}
       >
         <div className="flex justify-between border-b-2 border-blue border-opacity-30 p-5">
           {" "}
@@ -112,14 +72,12 @@ function ContactForm() {
           <input
             className="bg-transparent text-right"
             type="text"
-            id="name"
-            name="name"
             placeholder="John Smith"
-            onChange={handleChange}
-            value={formData.name}
-            required
+            {...register("name", registerOptions.name)}
           />
-          {errors.name && <small className="text-red-500">{errors.name}</small>}
+          {errors?.name && (
+            <small className="text-red-500">{errors.name.message}</small>
+          )}
         </div>
 
         <div className="flex justify-between gap-4  border-b-2 border-blue border-opacity-30 p-5">
@@ -130,15 +88,11 @@ function ContactForm() {
           <input
             className="bg-transparent text-right"
             type="email"
-            id="email"
-            name="email"
             placeholder="john@email.com"
-            onChange={handleChange}
-            value={formData.email}
-            required
+            {...register("email", registerOptions.email)}
           />
-          {errors.email && (
-            <small className="text-red-500">{errors.email}</small>
+          {errors?.email && (
+            <small className="text-red-500">{errors.email.message}</small>
           )}
         </div>
 
@@ -151,14 +105,13 @@ function ContactForm() {
             className="bg-transparent w-7/12 text-right"
             type="text"
             id="company"
-            name="company"
             placeholder="ABC Ltd"
-            onChange={handleChange}
-            value={formData.company}
-            required
+            {...register("company", registerOptions.company)}
           />
-          {errors.company && (
-            <small className="text-red-500">{errors.company}</small>
+          {errors?.company && (
+            <small className="text-red-500 text-right">
+              {errors.company.message}
+            </small>
           )}
         </div>
 
@@ -171,13 +124,10 @@ function ContactForm() {
             className="bg-transparent text-right"
             type="text"
             id="title"
-            name="title"
-            onChange={handleChange}
-            value={formData.title}
-            required
+            {...register("title", registerOptions.title)}
           />
-          {errors.title && (
-            <small className="text-red-500">{errors.title}</small>
+          {errors?.title && (
+            <small className="text-red-500">{errors.title.message}</small>
           )}
         </div>
 
@@ -189,23 +139,21 @@ function ContactForm() {
           <textarea
             className="bg-transparent"
             id="message"
-            name="message"
-            onChange={handleChange}
-            value={formData.message}
-            required
+            {...register("inquiry", registerOptions.inquiry)}
           />
-          {errors.message && (
-            <small className="text-red-500">{errors.message}</small>
+          {errors?.inquiry && (
+            <small className="text-red-500">{errors.inquiry.message}</small>
           )}
         </div>
-        <p className="text-xs p-4">All fields are required</p>
+
+        <small className="text-xs p-4">All fields are required</small>
+
         <div className="flex gap-6 opacity-100 my-4">
           <input
             type="checkbox"
             id="subscribe"
             name="subscribe"
             className="bg-transparent text-right"
-            onChange={handleChange}
           />
           <label className="flex" htmlFor="subscribe">
             Stay up-to-date with company announcements and updates to our API
@@ -222,5 +170,3 @@ function ContactForm() {
     </>
   );
 }
-
-export default ContactForm;
