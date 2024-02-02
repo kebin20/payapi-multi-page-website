@@ -48,7 +48,9 @@ export default function ContactForm() {
         },
       });
 
-      if (!response.ok) {
+      if (response.ok) {
+        alert("Form submitted successfully!");
+      } else {
         throw new Error("Failed to submit contact form");
       }
     } catch (error) {
